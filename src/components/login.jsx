@@ -1,4 +1,4 @@
-import { FaUser, FaLock } from "react-icons/fa"
+import { FaUser, FaLock, FaEnvelope } from "react-icons/fa"
 import { useState } from "react"
 import './login.css'
 
@@ -21,7 +21,7 @@ return (
             <h1>Acesse o sistema</h1>
             <div className="input-field">
                 <input type="email" placeholder="E-mail" onChange={(e) => setUsername(e.target.value)} />
-                <FaUser className="icon"/>
+                <FaEnvelope className="icon"/>
             </div>
             
             <div className="input-field">
