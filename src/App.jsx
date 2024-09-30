@@ -1,11 +1,11 @@
 import './App.css';
+import React, { useEffect, useState } from 'react';
 import Login from './components/login/login';
 import HomePage from './components/home/homepage';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-
 
 const router = createBrowserRouter([
   {
@@ -21,7 +21,9 @@ const router = createBrowserRouter([
 
 
 function App() {
-  
+
+
+    
 
   return (
 
@@ -29,6 +31,7 @@ function App() {
     <RouterProvider
       router={router}
     />
+
   </div>
   );
 }
