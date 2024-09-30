@@ -10,12 +10,7 @@ const Login = () => {
     const navigate = useNavigate();
     const [username,setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [responseData, setResponseData] = useState(null);
-    const [error, setError] = useState(null);
-    const [user] = useState({
-        username: "mw@adm",
-        password: "1234"
-    })
+
 
 
 
@@ -30,7 +25,7 @@ const Login = () => {
         }
 
         const response = await axios.post(
-            "https://cors-anywhere.herokuapp.com/http://poweruptech.app:8080/api/login",
+            "/api/login",
             user,
             {
                 headers: {
