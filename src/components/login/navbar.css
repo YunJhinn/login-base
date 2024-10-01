@@ -1,0 +1,38 @@
+
+h1{
+    opacity: 1;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+
+}
+
+li{
+    padding: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.7;
+    transition: .3s;
+}
+
+a:hover{
+    opacity: 1;
+    
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    align-content: space-between;     
+    margin-top: 0;
+    background-position: top;
+    background-size: auto;
+    background-color: blue;
+    
+}
