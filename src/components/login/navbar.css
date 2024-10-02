@@ -1,17 +1,22 @@
 
-h1{
+#navbar h1{
     opacity: 1;
+    margin-top: 10px;
+    text-align: center;
+    
 }
 
 ul{
     display: flex;
     list-style: none;
     gap: 1rem;
+    
 
 }
 
 li{
     padding: 15px;
+    font-size: 30px;
 }
 
 a{
@@ -19,6 +24,7 @@ a{
     color: #fff;
     opacity: 0.7;
     transition: .3s;
+    
 }
 
 a:hover{
@@ -26,13 +32,31 @@ a:hover{
     
 }
 
+body{
+    padding-top: 10px;
+}
+
+img{
+    border-radius: 2px;
+    opacity: 1;
+    width: 250px;
+    height: 100%;
+}
+
 #navbar{
+    
     display: flex;
     align-items: center;
-    align-content: space-between;     
+    justify-content: space-between;     
     margin-top: 0;
     background-position: top;
     background-size: auto;
-    background-color: blue;
+    background-color: #011219;
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     
 }

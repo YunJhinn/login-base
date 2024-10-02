@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "../components/login/navbar.css"
+import logo from "../assets/logonavbar.jpg"
 
 const Navbar = () => {
 return (
     <div id="navbar">
+        <img src={logo} alt="Logo PowerTech"/>
         <h1><Link to={'/home'}>Power Tech</Link></h1>
         <nav>
             

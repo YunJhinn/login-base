@@ -1,4 +1,28 @@
+*{
+    font-family: Helvetica;
+}
+
+
 .container{
+/* cod all antigo         */
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+    text-shadow: #000 1px 1px;
+
+/* cod App antigo     */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    background-image: url("assets/newlogin.jpg");
+    background-size: cover;
+    background-position: center;
+
+/* cod container antigo   */
+
     width: 450px;
     background-color: rgba(255,255,255, 0.15);
     backdrop-filter: blur(10px);
@@ -6,6 +30,10 @@
     padding: 40px;
     border-radius: 10px;
 }
+
+
+
+
 .container h1 {
     text-align: center;
     font-size: 30px;
