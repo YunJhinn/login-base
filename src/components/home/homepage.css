@@ -1,5 +1,10 @@
-
-
+body{
+    margin-top: 0;
+}
+.containerHome{
+    background-color: #0b3911 ;
+    opacity: 0.8;
+}
 
 .containerHome h1{
     color: #79d21f;
@@ -7,6 +12,7 @@
     padding-bottom: 30px;
     margin-top: 80px;
     text-align: center;
+    
 }
 
 .cards{

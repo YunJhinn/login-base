@@ -7,6 +7,7 @@ const HomePage = () => {
     return(
         
         <div className="containerHome">
+            
             <Navbar/>
             <h1>CARDS TITULO TESTE</h1>    
             <div className="cards">

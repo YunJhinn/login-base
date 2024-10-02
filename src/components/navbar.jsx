@@ -15,7 +15,7 @@ return (
                 <li><Link to={'/home'}>HomePage</Link></li>
                 <li><Link to={'/home'}>Perfil</Link></li>
                 <li><Link to={'/home'}>ISC</Link></li>
-                <li><Link to={'/home'}>Sobre</Link></li>
+                <li><Link to={'/'}>Sobre</Link></li>
             </ul>
         </nav>
     
