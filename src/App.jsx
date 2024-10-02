@@ -9,6 +9,7 @@ import {
 import Navbar from './components/navbar';
 
 
+
 const router = createBrowserRouter([
   {
     path: "/",
