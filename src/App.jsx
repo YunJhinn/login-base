@@ -1,14 +1,9 @@
-import './App.css';
-import React, { useEffect, useState } from 'react';
-import Login from './components/login/login';
-import HomePage from './components/home/homepage';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import Navbar from './components/navbar';
-
-
+import "./App.css";
+import React, { useEffect, useState } from "react";
+import Login from "./components/login/login";
+import HomePage from "./components/home/homepage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Navbar from "./components/navbar";
 
 const router = createBrowserRouter([
   {
@@ -19,27 +14,14 @@ const router = createBrowserRouter([
     path: "/home",
     element: <HomePage />,
   },
-  
-  
 ]);
 
-
 function App() {
-
-
-    
-
   return (
-
     <div className="App">
-      
-    <RouterProvider
-    
-      router={router}
-    />
-
-  </div>
+      <RouterProvider router={router} />
+    </div>
   );
 }
 
-export default App
+export default App;
