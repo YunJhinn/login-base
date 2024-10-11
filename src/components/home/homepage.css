@@ -2,13 +2,13 @@ body {
   margin-top: 0;
 }
 .containerHome {
-  background-image: linear-gradient(180deg, #6efdc9, #2d30f3);
+  background-color: white;
   min-height: 100vh;
   min-width: 100%;
 }
 
 .containerHome h1 {
-  color: #05395e;
+  color: black;
   padding-top: 30px;
   padding-bottom: 30px;
   margin-top: 80px;
@@ -27,9 +27,9 @@ body {
 
 .cardstyle {
   opacity: 1;
-  background-color: #03528a;
-  border: 5px solid #00f59d;
-  border-top: 10px solid #00f59d;
+  background-color: white;
+  border: 0.5px solid black;
+
   text-align: center;
   border-radius: 5px;
   width: 350px;
@@ -50,14 +50,14 @@ body {
 }
 
 .cardstyle h2 {
-  color: #00c8ee;
+  color: black;
   font-size: 25px;
   margin: 0 0 10px;
 }
 
 .cardstyle p {
   font-size: 50px;
-  color: #00f59d;
+  color: #48718c;
 }
 
 .cardstyle a {
@@ -69,7 +69,7 @@ body {
 
 .icon {
   height: 80%;
-  color: #00f59d;
+  color: white;
   padding-right: 3px;
 }
 
