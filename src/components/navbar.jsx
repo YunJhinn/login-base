@@ -14,7 +14,7 @@ const Navbar = () => {
     <div id="navbar">
       <img src={logo} alt="Logo PowerTech" />
       <h1>
-        <Link to={"/home"}>Power Tech</Link>
+        <Link to={"/home"}>Power Up Tech</Link>
       </h1>
       <nav>
         <ul>

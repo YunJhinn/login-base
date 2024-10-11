@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import cardteste from "./cardteste.avif";
 import "./homepage.css";
 import { GiProfit } from "react-icons/gi";
+import { MdLeaderboard } from "react-icons/md";
+import { FaDailymotion } from "react-icons/fa";
+import { FaIdeal } from "react-icons/fa";
+import { FaNoteSticky } from "react-icons/fa6";
+import Bar from "../../Chart";
 
 const HomePage = () => {
   return (
@@ -20,56 +25,42 @@ const HomePage = () => {
         </div>
 
         <div className="cardstyle">
-          <img src={cardteste} alt="" />
-          <h2>Title</h2>
+          <h2>Lead Conversation</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
-            deserunt saepe, repellat autem quae
+            <MdLeaderboard />
+            32.89%
           </p>
-          <Link to={"#"}>
-            {" "}
-            <a>Saiba Mais</a>{" "}
-          </Link>
         </div>
 
         <div className="cardstyle">
-          <img src={cardteste} alt="" />
-          <h2>Title</h2>
+          <h2>Daily Average Income</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
-            deserunt saepe, repellat autem quae
+            <FaDailymotion />
+            $1,956.5
           </p>
-          <Link to={"#"}>
-            {" "}
-            <a>Saiba Mais</a>{" "}
-          </Link>
         </div>
 
         <div className="cardstyle">
-          <img src={cardteste} alt="" />
-          <h2>Title</h2>
+          <h2>Anual Deals</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
-            deserunt saepe, repellat autem quae
+            <FaIdeal />
+            2,589
           </p>
-          <Link to={"#"}>
-            {" "}
-            <a>Saiba Mais</a>{" "}
-          </Link>
         </div>
 
         <div className="cardstyle">
-          <img src={cardteste} alt="" />
-          <h2>Title</h2>
+          <h2>Test</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
-            deserunt saepe, repellat autem quae
+            <FaNoteSticky />
+            teste 1
           </p>
-          <Link to={"#"}>
-            {" "}
-            <a>Saiba Mais</a>{" "}
-          </Link>
         </div>
+      </div>
+      <div>
+        <h2>Footer</h2>
+        <p>
+          <Bar />
+        </p>
       </div>
     </div>
   );
