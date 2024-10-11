@@ -9,6 +9,9 @@ import { FaIdeal } from "react-icons/fa";
 import { FaNoteSticky } from "react-icons/fa6";
 import Bar from "../../Chart";
 
+import Line from "../../LineChart";
+import Area from "../../AreaChart";
+
 const HomePage = () => {
   return (
     <div className="containerHome">
@@ -55,10 +58,11 @@ const HomePage = () => {
             teste 1
           </p>
         </div>
-
-        <div>
-          <Bar />
-        </div>
+      </div>
+      <div className="charts-style">
+        <Bar />
+        <Area />
+        <Line />
       </div>
       <div>
         <h2>Footer</h2>

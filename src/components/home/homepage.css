@@ -77,3 +77,12 @@ body {
   max-width: 650px;
   margin: 35px auto;
 }
+
+.charts-style {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 150px;
+
+  width: 100%;
+  margin-top: 50px;
+}
