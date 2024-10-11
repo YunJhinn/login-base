@@ -55,12 +55,14 @@ const HomePage = () => {
             teste 1
           </p>
         </div>
+
+        <div>
+          <Bar />
+        </div>
       </div>
       <div>
         <h2>Footer</h2>
-        <p>
-          <Bar />
-        </p>
+        <p></p>
       </div>
     </div>
   );
