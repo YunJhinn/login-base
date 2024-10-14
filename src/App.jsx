@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/navbar";
 import CreateUser from "./components/createuser/CreateUser";
 import TableIsc from "./components/ISC/TableIsc";
+import CreateIsc from "./components/createISC/CreateIsc";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/isc",
     element: <TableIsc />,
+  },
+  {
+    path: "/createisc",
+    element: <CreateIsc />,
   },
 ]);
 
