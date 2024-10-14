@@ -5,6 +5,7 @@ import HomePage from "./components/home/homepage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/navbar";
 import CreateUser from "./components/createuser/CreateUser";
+import TableIsc from "./components/ISC/TableIsc";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/createuser",
     element: <CreateUser />,
+  },
+  {
+    path: "/isc",
+    element: <TableIsc />,
   },
 ]);
 

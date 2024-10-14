@@ -43,9 +43,9 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to={"/home"}>
+            <Link to={"/isc"}>
               <SiSpeedtest className="icon" />
-              ISC
+              SESMT
             </Link>
           </li>
           <li>
