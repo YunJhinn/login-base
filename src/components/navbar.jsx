@@ -49,7 +49,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to={"/"}>
+            <Link to={"/createisc"}>
               <FcAbout className="icon" />
               Sobre
             </Link>
