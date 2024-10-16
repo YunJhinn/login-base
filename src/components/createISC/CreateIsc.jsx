@@ -4,7 +4,7 @@ import "./createIsc.css";
 import ReactDOM from "react-dom/client";
 import api from "../../services/api.js";
 
-const url = "http://poweruptech.app:8080";
+const url = "http://poweruptech.app:8080/api/getc_is";
 
 const CreateIsc = () => {
   const [credencial, setCredencial] = useState("");

@@ -5,19 +5,27 @@ import { MdSmsFailed } from "react-icons/md";
 import { useState, useEffect } from "react";
 import { IoIosAddCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
-
-const url = "http://poweruptech.app:8080/api/get_isc";
+import api, { getIscUrl } from "../../services/api.js";
+import axios from "axios";
 
 const TableIsc = () => {
   const [inspecoes, setInspecoes] = useState([]);
 
   useEffect(() => {
     async function fetchInspecoes() {
-      const res = await fetch(url);
-
-      const data = await res.json();
-
-      setInspecoes(data);
+      try {
+        const res = await api.get(getIscUrl);
+        console.log("Dados recebidos:", res.data);
+        setInspecoes(res.data);
+        if (Array.isArray(res.data)) {
+          setInspecoes(res.data);
+        } else {
+          console.error("Os dados recebidos não são um array:", res.data);
+          setInspecoes([]); // Reseta para um array vazio em caso de erro
+        }
+      } catch (error) {
+        console.error("erro ao buscar inspeções:", error);
+      }
     }
 
     fetchInspecoes();
@@ -28,37 +36,47 @@ const TableIsc = () => {
       <div className="insp">
         <div className="card_isc">
           <h2>TOTAL DE INSPEÇÕES</h2>
-          <p>56</p>
+          <p>{inspecoes.length}</p>
           <MdVerifiedUser className="icon-isc-v" />
         </div>
         <div className="card_isc">
           <h2>TOTAL DE NÃO CONFORMIDADES</h2>
-          <p>10</p>
+          <p>
+            <p>
+              {Array.isArray(inspecoes)
+                ? inspecoes.filter((isc) => isc.n_conforme).length
+                : 0}
+            </p>
+          </p>
           <MdSmsFailed className="icon-isc-f" />
         </div>
       </div>
       {inspecoes.map((isc) => (
         <table>
-          <tr>
-            <th>ID LOCAL</th>
-            <th>CONTRATO</th>
-            <th>DATA</th>
-            <th>N CONFORME</th>
-            <th>LOCAL</th>
-            <th>TIPO DE SERVIÇO</th>
-            <th>MATRICULA</th>
-            <th>DETALHES</th>
-          </tr>
-          <tr>
-            <td key={isc.id}>{isc.id_local}</td>
-            <td>{isc.contrato}</td>
-            <td>{isc.data}</td>
-            <td>{isc.n_conforme}</td>
-            <td>{isc.local}</td>
-            <td>{isc.tipo_servico}</td>
-            <td>{isc.matricula}</td>
-            <td>{isc.detalhes}</td>
-          </tr>
+          <thead>
+            <tr>
+              <th>ID LOCAL</th>
+              <th>CONTRATO</th>
+              <th>DATA</th>
+              <th>N CONFORME</th>
+              <th>LOCAL</th>
+              <th>TIPO DE SERVIÇO</th>
+              <th>MATRICULA</th>
+              <th>DETALHES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr key={isc._id}>
+              <td>{isc.id_local}</td>
+              <td>{isc.contrato}</td>
+              <td>{isc.data}</td>
+              <td>{isc.n_conforme}</td>
+              <td>{isc.local}</td>
+              <td>{isc.tipo_servico}</td>
+              <td>{isc.matricula}</td>
+              <td>{isc.detalhes}</td>
+            </tr>
+          </tbody>
         </table>
       ))}
       <p id="link-add">
