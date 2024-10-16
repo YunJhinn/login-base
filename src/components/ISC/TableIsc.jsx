@@ -15,6 +15,7 @@ const TableIsc = () => {
     async function fetchInspecoes() {
       try {
         const res = await api.get(getIscUrl);
+
         console.log("Dados recebidos:", res.data);
         setInspecoes(res.data);
         if (Array.isArray(res.data)) {
