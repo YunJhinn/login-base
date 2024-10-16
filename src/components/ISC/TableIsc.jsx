@@ -10,11 +10,15 @@ import axios from "axios";
 
 const TableIsc = () => {
   const [inspecoes, setInspecoes] = useState([]);
-
+  let config = {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("token"),
+    },
+  };
   useEffect(() => {
     async function fetchInspecoes() {
       try {
-        const res = await api.get(getIscUrl);
+        const res = await api.get("/api/get_isc", config);
 
         console.log("Dados recebidos:", res.data);
         setInspecoes(res.data);
