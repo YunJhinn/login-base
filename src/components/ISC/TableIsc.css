@@ -61,3 +61,12 @@ td {
   font-size: 2rem;
   color: black;
 }
+
+#link-add {
+  background: transparent;
+  border: none;
+
+  margin-top: 5px;
+  font-size: 20px;
+  text-align: center;
+}

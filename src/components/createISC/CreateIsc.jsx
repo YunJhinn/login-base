@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../navbar";
-import "./CreateIsc.css";
+import "./createIsc.css";
 import ReactDOM from "react-dom/client";
+import api from "../../services/api.js";
+
+const url = "http://poweruptech.app:8080";
 
 const CreateIsc = () => {
   const [credencial, setCredencial] = useState("");
   const [secao, setSecao] = useState("");
   const [date, setDate] = useState("");
   const [descricao, setDescricao] = useState("");
+  const [imagem, setImagem] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,7 +24,7 @@ const CreateIsc = () => {
     };
 
     try {
-      const response = await fetch("http://poweruptech.app:8080", {
+      const response = await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,7 +55,7 @@ const CreateIsc = () => {
       <h2>Criar ISC</h2>
       <form className="form_c_isc" onSubmit={handleSubmit}>
         <label htmlFor="credencial">
-          Credencial
+          Credencial:
           <input
             type="text"
             placeholder="credencial"
@@ -61,7 +65,7 @@ const CreateIsc = () => {
           />
         </label>
         <label htmlFor="secao">
-          Seção
+          Seção:
           <select name="secao" value={secao} onChange={handleSecao}>
             <option value="Condições Gerais do Local">
               Condições Gerais do Local
@@ -75,7 +79,7 @@ const CreateIsc = () => {
           </select>
         </label>
         <label htmlFor="date">
-          Data
+          Data:
           <input
             type="date"
             name="date"
@@ -84,7 +88,7 @@ const CreateIsc = () => {
           />
         </label>
         <label htmlFor="descricao">
-          Descrição
+          Descrição:
           <textarea
             name="descricao"
             placeholder="Insira a Descrição do trabalho que foi feito"
@@ -92,6 +96,16 @@ const CreateIsc = () => {
             onChange={(e) => setDescricao(e.target.value)}
           ></textarea>
         </label>
+        <label htmlFor="imagem">
+          Imagem
+          <input
+            type="image"
+            name="imagem"
+            value={imagem}
+            onChange={(e) => setImagem(e.target.value)}
+          />
+        </label>
+        <input type="submit" value="Criar" className="criar-isc-btn" />
       </form>
     </div>
   );

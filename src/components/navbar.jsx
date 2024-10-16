@@ -37,7 +37,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to={"/createuser"}>
+            <Link to={"/showusers"}>
               <FaUsers className="icon" />
               All Users
             </Link>
