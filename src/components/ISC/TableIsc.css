@@ -75,3 +75,8 @@ td {
   padding: 5px;
   font-size: 20px;
 }
+
+.link-add:hover {
+  opacity: 1;
+  background-color: rgb(9, 223, 9);
+}
