@@ -60,7 +60,11 @@ const CreateIsc = () => {
         </label>
         <label htmlFor="secao">
           Seção:
-          <select name="secao" value={secao} onChange={handleSecao}>
+          <select
+            name="secao"
+            value={secao}
+            onChange={(e) => setSecao(e.target.value)}
+          >
             <option value="Condições Gerais do Local">
               Condições Gerais do Local
             </option>

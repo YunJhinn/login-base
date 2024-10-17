@@ -1,7 +1,7 @@
 .isc {
   background-image: linear-gradient(180deg, white, rgb(131, 230, 255));
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
 }
@@ -52,6 +52,10 @@ td {
   color: green;
   font-size: 30px;
 }
+.icon-isc-w {
+  color: white;
+  font-size: 30px;
+}
 
 .card_isc h2 {
   font-weight: bold;
@@ -62,11 +66,12 @@ td {
   color: black;
 }
 
-#link-add {
-  background: transparent;
-  border: none;
-
-  margin-top: 5px;
+.link-add {
+  background-color: green;
+  color: white;
+  width: 200px;
+  margin-left: 5%;
+  margin-top: 30px;
+  padding: 5px;
   font-size: 20px;
-  text-align: center;
 }
