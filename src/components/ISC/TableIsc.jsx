@@ -5,7 +5,7 @@ import { MdSmsFailed } from "react-icons/md";
 import { useState, useEffect } from "react";
 import { IoIosAddCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
-import api, { getIscUrl } from "../../services/api.js";
+import api from "../../services/api.js";
 import axios from "axios";
 
 const TableIsc = () => {

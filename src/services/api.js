@@ -13,5 +13,5 @@ api.interceptors.request.use(async (config) => {
 
   return config;
 });
-export const getIscUrl = () => `${api.defaults.baseURL}/api/get_isc`;
+
 export default api;
