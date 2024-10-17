@@ -43,12 +43,6 @@ const CreateIsc = () => {
     }
   };
 
-  const handleSecao = (e) => {
-    e.preventDefault();
-
-    setSecao(e.target.value);
-  };
-
   return (
     <div className="container-c-isc">
       <Navbar />
