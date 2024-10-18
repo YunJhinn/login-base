@@ -53,7 +53,7 @@ const CreateIsc = ({ onIsAdded }) => {
       <Navbar />
       <h2>Criar ISC</h2>
       <form className="form_c_isc" onSubmit={handleSubmit}>
-        <label htmlFor="credencial">
+        <label htmlFor="id_local">
           ID local:
           <input
             type="text"
@@ -61,6 +61,7 @@ const CreateIsc = ({ onIsAdded }) => {
             name="id_local"
             value={newIsc.id_local}
             onChange={handleChange}
+            required
           />
         </label>
         <label htmlFor="local">
@@ -71,6 +72,7 @@ const CreateIsc = ({ onIsAdded }) => {
             name="local"
             value={newIsc.local}
             onChange={handleChange}
+            required
           />
         </label>
         <label htmlFor="municipio">
@@ -79,18 +81,20 @@ const CreateIsc = ({ onIsAdded }) => {
             name="municipio"
             value={newIsc.municipio}
             onChange={handleChange}
+            required
           >
             <option value="Orixiguiná">Orixiguiná</option>
             <option value="Faro">Faro</option>
             <option value="Terra Santa">Terra Santa</option>
           </select>
         </label>
-        <label htmlFor="secao">
+        <label htmlFor="tipo_servico">
           Tipo de Servico:
           <select
             name="tipo_servico"
             value={newIsc.tipo_servico}
             onChange={handleChange}
+            required
           >
             <option value="Condições Gerais do Local">
               Condições Gerais do Local
@@ -103,13 +107,14 @@ const CreateIsc = ({ onIsAdded }) => {
             </option>
           </select>
         </label>
-        <label htmlFor="date">
+        <label htmlFor="data">
           Data:
           <input
             type="date"
             name="data"
             value={newIsc.data}
             onChange={handleChange}
+            required
           />
         </label>
         <label htmlFor="n_conforme">
@@ -121,7 +126,7 @@ const CreateIsc = ({ onIsAdded }) => {
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="descricao">
+        <label htmlFor="observacao_geral">
           Observação Geral:
           <textarea
             name="observacao_geral"
