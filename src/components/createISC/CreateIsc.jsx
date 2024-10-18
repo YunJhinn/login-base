@@ -3,67 +3,94 @@ import Navbar from "../navbar";
 import "./createIsc.css";
 import ReactDOM from "react-dom/client";
 import api from "../../services/api.js";
+import axios from "axios";
 
-const url = "/api/get_isc";
+const CreateIsc = ({ onIsAdded }) => {
+  const [newIsc, setNewIsc] = useState({
+    data: "",
+    n_conforme: false,
+    id_local: "",
+    local: "",
+    municipio: "",
+    observacao_geral: "",
+    tipo_servico: "",
+  });
 
-const CreateIsc = () => {
-  const [credencial, setCredencial] = useState("");
-  const [secao, setSecao] = useState("");
-  const [date, setDate] = useState("");
-  const [descricao, setDescricao] = useState("");
-  const [imagem, setImagem] = useState("");
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setNewIsc({
+      ...newIsc,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const data = {
-      credencial,
-      secao,
-      date,
-      descricao,
-    };
-
     try {
-      const response = await fetch(url, {
-        method: "POST",
+      const res = await axios.post("/api/create_isc", newIsc, {
         headers: {
-          "Content-Type": "application/json",
+          Authorization: "Bearer " + localStorage.getItem("token"),
         },
-        body: JSON.stringify(data),
       });
-      if (!response.ok) {
-        throw new Error("Erro ao enviar os dados");
-      }
+      onIsAdded(res.data);
 
-      const result = await response.json();
-      alert("Dados enviados com Sucesso: " + JSON.stringify(result));
+      setNewIsc({
+        data: "",
+        n_conforme: false,
+        id_local: "",
+        local: "",
+        municipio: "",
+        observacao_geral: "",
+        tipo_servico: "",
+      });
     } catch (error) {
-      console.error("erro: ", error);
-      alert("Falha ao enviar os dados.");
+      console.error("Erro ao Adicionar Inspeção", error);
+      alert("Erro ao Adicionar Inspeção,  tente novamente.");
     }
   };
-
   return (
     <div className="container-c-isc">
       <Navbar />
       <h2>Criar ISC</h2>
       <form className="form_c_isc" onSubmit={handleSubmit}>
         <label htmlFor="credencial">
-          Credencial:
+          ID local:
           <input
             type="text"
-            placeholder="credencial"
-            name={"credencial"}
-            value={credencial}
-            onChange={(e) => setCredencial(e.target.value)}
+            placeholder="ID local"
+            name="id_local"
+            value={newIsc.id_local}
+            onChange={handleChange}
           />
         </label>
-        <label htmlFor="secao">
-          Seção:
+        <label htmlFor="local">
+          Local
+          <input
+            type="text"
+            placeholder="Local"
+            name="local"
+            value={newIsc.local}
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="municipio">
+          Municipio:
           <select
-            name="secao"
-            value={secao}
-            onChange={(e) => setSecao(e.target.value)}
+            name="municipio"
+            value={newIsc.municipio}
+            onChange={handleChange}
+          >
+            <option value="Orixiguiná">Orixiguiná</option>
+            <option value="Faro">Faro</option>
+            <option value="Terra Santa">Terra Santa</option>
+          </select>
+        </label>
+        <label htmlFor="secao">
+          Tipo de Servico:
+          <select
+            name="tipo_servico"
+            value={newIsc.tipo_servico}
+            onChange={handleChange}
           >
             <option value="Condições Gerais do Local">
               Condições Gerais do Local
@@ -80,29 +107,30 @@ const CreateIsc = () => {
           Data:
           <input
             type="date"
-            name="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
+            name="data"
+            value={newIsc.data}
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="n_conforme">
+          N Conforme:
+          <input
+            type="checkbox"
+            name="n_conforme"
+            checked={newIsc.n_conforme}
+            onChange={handleChange}
           />
         </label>
         <label htmlFor="descricao">
-          Descrição:
+          Observação Geral:
           <textarea
-            name="descricao"
-            placeholder="Insira a Descrição do trabalho que foi feito"
-            value={descricao}
-            onChange={(e) => setDescricao(e.target.value)}
+            name="observacao_geral"
+            placeholder="Observações e descrição do trabalho feito."
+            value={newIsc.observacao_geral}
+            onChange={handleChange}
           ></textarea>
         </label>
-        <label htmlFor="imagem">
-          Imagem
-          <input
-            type="image"
-            name="imagem"
-            value={imagem}
-            onChange={(e) => setImagem(e.target.value)}
-          />
-        </label>
+
         <input type="submit" value="Criar" className="criar-isc-btn" />
       </form>
     </div>

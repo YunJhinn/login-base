@@ -7,9 +7,12 @@ import { IoIosAddCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
 import api from "../../services/api.js";
 import axios from "axios";
+import Chart from "react-apexcharts";
 
 const TableIsc = () => {
   const [inspecoes, setInspecoes] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   let config = {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("token"),
@@ -30,6 +33,9 @@ const TableIsc = () => {
         }
       } catch (error) {
         console.error("erro ao buscar inspeções:", error);
+        setError("Não foi possível carregar as inspeções.");
+      } finally {
+        setLoading(false);
       }
     }
 
