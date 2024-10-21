@@ -45,13 +45,19 @@
   color: white;
   background-color: green;
   font-size: 20px;
+  border-radius: 15px;
 }
 .icon-footer-email {
+  background-color: white;
+  border-radius: 15px;
   color: red;
   font-size: 20px;
 }
 .icon-footer-phone {
   font-size: 20px;
+  background-color: white;
+  color: black;
+  border-radius: 15px;
 }
 .container-footer h2 {
   color: white;
