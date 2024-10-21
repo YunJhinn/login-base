@@ -25,8 +25,15 @@
   font-size: 30px;
 }
 .icon-footer-insta {
-  color: purple;
+  background-image: linear-gradient(
+    to bottom right,
+    red,
+    yellow,
+    rgb(248, 37, 195),
+    purple
+  );
   font-size: 30px;
+  border-radius: 5px;
 }
 .icon-footer-wpp {
   color: white;
