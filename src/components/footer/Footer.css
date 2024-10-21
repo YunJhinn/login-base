@@ -15,14 +15,20 @@
 .icon-footer-facebook {
   color: blue;
   font-size: 30px;
+  background-color: white;
+  border-radius: 15px;
 }
 .icon-footer-maps {
   color: red;
   font-size: 30px;
+  background-color: white;
+  border-radius: 15px;
 }
 .icon-footer-linkedin {
+  background-color: white;
   color: rgb(53, 161, 250);
   font-size: 30px;
+  border-radius: 3px;
 }
 .icon-footer-insta {
   background-image: linear-gradient(
