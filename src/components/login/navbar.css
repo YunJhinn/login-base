@@ -1,9 +1,3 @@
-#navbar h1 {
-  opacity: 1;
-  margin-top: 10px;
-  text-align: center;
-}
-
 ul {
   display: flex;
   list-style: none;
@@ -40,7 +34,7 @@ img {
 #navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 0;
   background-position: top;
   background-size: auto;

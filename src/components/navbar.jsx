@@ -13,16 +13,7 @@ const Navbar = () => {
   return (
     <div id="navbar">
       <img src={logo} alt="Logo PowerTech" />
-      <div className="perfil-navbar">
-        <img
-          src="https://www.gravatar.com/avatar/HASH"
-          alt="imagem teste"
-          className="img-perfil"
-        />
-        <Link to={"/home"}>
-          <p>Nome Usuário</p>
-        </Link>
-      </div>
+
       <nav>
         <ul>
           <li>
@@ -50,14 +41,18 @@ const Navbar = () => {
               SESMT
             </Link>
           </li>
-          <li>
-            <Link to={"/createisc"}>
-              <FcAbout className="icon" />
-              Sobre
-            </Link>
-          </li>
         </ul>
       </nav>
+      <div className="perfil-navbar">
+        <img
+          src="https://www.gravatar.com/avatar/HASH"
+          alt="imagem teste"
+          className="img-perfil"
+        />
+        <Link to={"/home"}>
+          <p>Nome Usuário</p>
+        </Link>
+      </div>
     </div>
   );
 };
