@@ -13,9 +13,16 @@ const Navbar = () => {
   return (
     <div id="navbar">
       <img src={logo} alt="Logo PowerTech" />
-      <h1>
-        <Link to={"/home"}>Power Up Tech</Link>
-      </h1>
+      <div className="perfil-navbar">
+        <img
+          src="https://www.gravatar.com/avatar/HASH"
+          alt="imagem teste"
+          className="img-perfil"
+        />
+        <Link to={"/home"}>
+          <p>Nome Usuário</p>
+        </Link>
+      </div>
       <nav>
         <ul>
           <li>
@@ -30,12 +37,7 @@ const Navbar = () => {
               Dashboard
             </Link>
           </li>
-          <li>
-            <Link to={"/home"}>
-              <FaUser className="icon" />
-              Perfil
-            </Link>
-          </li>
+
           <li>
             <Link to={"/allusers"}>
               <FaUsers className="icon" />

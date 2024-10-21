@@ -11,6 +11,7 @@ import Bar from "../../Chart";
 
 import Line from "../../LineChart";
 import Area from "../../AreaChart";
+import Footer from "../footer/footer";
 
 const HomePage = () => {
   return (
@@ -63,10 +64,10 @@ const HomePage = () => {
         <Bar />
         <Area />
         <Line />
+        <Area />
       </div>
       <div>
-        <h2>Footer</h2>
-        <p></p>
+        <Footer />
       </div>
     </div>
   );

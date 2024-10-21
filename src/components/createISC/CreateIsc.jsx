@@ -4,6 +4,7 @@ import "./createIsc.css";
 import ReactDOM from "react-dom/client";
 import api from "../../services/api.js";
 import axios from "axios";
+import Footer from "../footer/footer.jsx";
 
 const CreateIsc = ({ onIsAdded }) => {
   const [newIsc, setNewIsc] = useState({
@@ -138,6 +139,7 @@ const CreateIsc = ({ onIsAdded }) => {
 
         <input type="submit" value="Criar" className="criar-isc-btn" />
       </form>
+      <Footer />
     </div>
   );
 };

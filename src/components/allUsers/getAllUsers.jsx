@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../navbar";
 import api from "../../services/api.js";
 import "./getAllUsers.css";
+import Footer from "../footer/footer.jsx";
 
 const GetAllUsers = () => {
   const [users, setUsers] = useState([]);
@@ -45,6 +46,7 @@ const GetAllUsers = () => {
           <h3>Empresa: {user.empresa_nome || "N/A"}</h3>
         </div>
       ))}
+      <Footer />
     </div>
   );
 };

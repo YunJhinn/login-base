@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import api from "../../services/api.js";
 import axios from "axios";
 import Chart from "react-apexcharts";
+import Footer from "../footer/footer.jsx";
 
 const TableIsc = () => {
   const [inspecoes, setInspecoes] = useState([]);
@@ -99,6 +100,7 @@ const TableIsc = () => {
           </button>
         </div>
       )}
+      <Footer />
     </div>
   );
 };

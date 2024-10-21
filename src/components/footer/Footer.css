@@ -1,0 +1,58 @@
+.container-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 150px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+  background-color: #48718c;
+  position: relative;
+
+  padding: 1rem;
+  padding-bottom: 2.1%;
+}
+
+.icon-footer-facebook {
+  color: blue;
+  font-size: 30px;
+}
+.icon-footer-maps {
+  color: black;
+  font-size: 30px;
+}
+.icon-footer-linkedin {
+  color: rgb(53, 161, 250);
+  font-size: 30px;
+}
+.icon-footer-insta {
+  color: purple;
+  font-size: 30px;
+}
+.icon-footer-wpp {
+  color: white;
+  background-color: green;
+  font-size: 20px;
+}
+.icon-footer-email {
+  color: red;
+  font-size: 20px;
+}
+.icon-footer-phone {
+  font-size: 20px;
+}
+.container-footer h2 {
+  color: white;
+  padding-top: 2rem;
+}
+.container-footer p {
+  color: white;
+  padding: 5px;
+  font-size: 17px;
+}
+.mais {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: top;
+}

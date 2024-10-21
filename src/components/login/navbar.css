@@ -51,6 +51,22 @@ img {
   top: 0;
   left: 0;
   z-index: 1000;
-  border-bottom: 5px solid #00c8ee;
-  border-top: 5px solid #00c8ee;
+}
+
+.img-perfil {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.perfil-navbar {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2px;
+}
+.perfil-navbar p {
+  padding-top: 12px;
+  justify-content: center;
+  color: black;
 }

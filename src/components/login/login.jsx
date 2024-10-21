@@ -15,6 +15,7 @@ import "./login.css";
 import { json, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../navbar";
+import Footer from "../footer/footer";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -44,7 +45,7 @@ const Login = () => {
   return (
     <div className="container">
       <form onSubmit={handleSubmit}>
-        <h1>Acesse o sistema</h1>
+        <h1>Acesse o Sistema</h1>
         <div className="input-field">
           <input
             id="credencialLogin"
@@ -82,6 +83,7 @@ const Login = () => {
           </p>
         </div>
       </form>
+      <Footer />
     </div>
   );
 };

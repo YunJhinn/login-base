@@ -1,7 +1,8 @@
 .container-users {
+  padding-top: 15%;
   display: flex;
   justify-content: center;
-  text-align: center;
+
   flex-wrap: wrap;
   gap: 60px;
   background-image: linear-gradient(180deg, white, rgb(131, 230, 255));
@@ -11,6 +12,7 @@
 }
 
 .card-usuarios {
+  text-align: center;
   padding: 15px;
   padding-top: 30px;
   border: 2px solid white;

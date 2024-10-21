@@ -1,115 +1,111 @@
-*{
-    font-family: Helvetica;
+* {
+  font-family: Helvetica;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
 
-.container{
-/* cod all antigo         */
-    margin: 0;
-    padding: 0;
-    
-    box-sizing: border-box;
-    text-shadow: #000 1px 1px;
-
-/* cod App antigo     */
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 40vh;
-    background-image: url("assets/newlogin.jpg");
-    background-size: cover;
-    background-position: center;
-
-/* cod container antigo   */
-
-    width: 450px;
-    background-color: rgba(255,255,255, 0.15);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255, 0.2);
-    padding: 40px;
-    border-radius: 10px;
+  flex-wrap: wrap;
+  gap: 60px;
+  background-image: linear-gradient(180deg, rgb(131, 230, 255), white);
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
 }
-
-
-
 
 .container h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #fff;
-
+  text-align: center;
+  font-size: 30px;
+  color: black;
 }
-.container .input-field{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 30px auto;
+.container .input-field {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px auto;
 }
-.input-field input{
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    outline: none;
-    border: 2px solid rgba(255,255,255, 0.2);
-    border-radius: 40px;
-    font-size: 16px;
-    color: #fff;
-    padding: 20px 25px;
+.input-field input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  color: black;
+  padding: 20px 25px;
+  background-color: white;
 }
-.input-field input::placeholder{
-    color: #fff;
-
+.input-field input::placeholder {
+  color: black;
+  opacity: 0.6;
 }
-.input-field .icon{
-    position: absolute;
-    right: 25px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 18px;
-    color: #fff;
+.input-field .icon {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: black;
 }
-.container .recall-forget{
-    display: flex;
-    justify-content: space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15px;
+.container .recall-forget {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
 }
-.recall-forget label{
-    color: #fff;
-
+.recall-forget label {
+  color: black;
 }
-.recall-forget input{
-    margin-right: 5px;
+.recall-forget input {
+  margin-right: 5px;
 }
 .recall-forget a,
-.sign-link p a{
-    color: #fff;
-    text-decoration: none;
+.sign-link p a {
+  color: black;
+  text-decoration: none;
+}
+.recall-forget a:hover .sign-link p a:hover {
+  text-decoration: underline;
+}
+.container button {
+  width: 100%;
+  height: 50px;
+  background-color: #00c8ee;
+  color: white;
 
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: none;
 }
-.recall-forget a:hover
-.sign-link p a:hover{
-    text-decoration: underline;
+.container .sign-link {
+  font-size: 15px;
+  text-align: center;
+  margin: 20px 0 10px;
+  text-shadow: none;
+}
 
-}
-.container button{
-    width: 100%;
-    height: 50px;
-    background-color: #fff;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    text-shadow: none;
-}
-.container .sign-link{
-    font-size: 15px;
-    text-align: center;
-    margin: 20px 0 10px;
-    text-shadow: none;
-    
+.container form {
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  border: 4px solid white;
+  border-bottom: 10px solid #00c8ee;
+  background-color: white;
+  justify-content: center;
+  font-size: 20px;
+  width: 500px;
+  height: 600px;
+  padding: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50px;
 }
