@@ -6,7 +6,7 @@ import { SiGmail } from "react-icons/si";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { CiInstagram } from "react-icons/ci";
-import { FaMapMarkedAlt } from "react-icons/fa";
+import { MdLocationPin } from "react-icons/md";
 import "./Footer.css";
 
 const Footer = () => {
@@ -53,7 +53,7 @@ const Footer = () => {
         </p>
         <p>
           <Link to="https://www.google.com/maps/place/MW+Projetos+e+Constru%C3%A7%C3%B5es/@-16.6346272,-49.230797,17z/data=!3m1!4b1!4m6!3m5!1s0x935ef25be7e71def:0xee77f13044f284c2!8m2!3d-16.6346324!4d-49.2282221!16s%2Fg%2F1vp74w02?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D">
-            <FaMapMarkedAlt className="icon-footer-maps" />
+            <MdLocationPin className="icon-footer-maps" />
           </Link>
         </p>
       </div>
