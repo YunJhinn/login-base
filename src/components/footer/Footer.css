@@ -55,8 +55,8 @@
 }
 .icon-footer-phone {
   font-size: 20px;
-  background-color: white;
-  color: black;
+  background-color: rgb(53, 161, 250);
+  color: white;
   border-radius: 15px;
 }
 .container-footer h2 {
@@ -72,6 +72,6 @@
   padding-top: 2rem;
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 2px;
   align-items: top;
 }

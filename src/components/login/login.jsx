@@ -1,21 +1,11 @@
-import {
-  AxiosProvider,
-  Request,
-  Get,
-  Delete,
-  Head,
-  Post,
-  Put,
-  Patch,
-  withAxios,
-} from "react-axios";
 import { FaUser, FaLock, FaEnvelope } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import "./login.css";
 import { json, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Navbar from "../navbar";
+
 import Footer from "../footer/footer";
+import imagem from "../../assets/loginmw2.png";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -44,8 +34,12 @@ const Login = () => {
 
   return (
     <div className="container">
+      <div className="img-login">
+        <img src={imagem} alt="FundoLogin" />
+        <h2>BEM-VINDO A MW PROJETOS</h2>
+      </div>
       <form onSubmit={handleSubmit}>
-        <h1>Acesse o Sistema</h1>
+        <h1>LOGIN</h1>
         <div className="input-field">
           <input
             id="credencialLogin"

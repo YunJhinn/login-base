@@ -37,17 +37,17 @@ const Footer = () => {
       </div>
       <div className="mais">
         <p>
-          <Link to="https://www.facebook.com">
+          <Link to="https://www.facebook.com/people/MW-Projetos-e-Constru%C3%A7%C3%B5es/100089982840345/">
             <FaFacebook className="icon-footer-facebook" />
           </Link>
         </p>
         <p>
-          <Link to="https://www.linkedin.com">
+          <Link to="https://br.linkedin.com/company/mw-projetos-e-constru%C3%A7%C3%B5es?trk=similar-pages">
             <FaLinkedin className="icon-footer-linkedin" />
           </Link>
         </p>
         <p>
-          <Link to="https://www.instagram.com">
+          <Link to="https://www.instagram.com/mw_projetos_e_construcoes/">
             <CiInstagram className="icon-footer-insta" />
           </Link>
         </p>

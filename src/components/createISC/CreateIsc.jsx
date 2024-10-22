@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../navbar";
 import "./createIsc.css";
-import ReactDOM from "react-dom/client";
-import api from "../../services/api.js";
+
 import axios from "axios";
 import Footer from "../footer/footer.jsx";
 
