@@ -51,10 +51,10 @@ const Perfil = () => {
                 <h1>{perfilUser?.fullname || "Nome Usuário"}</h1>
                 <h2>{perfilUser?.cargo || "Cargo Usuário"}</h2>
               </div>
-              <Link to="/home">
-                <IoReturnUpBackSharp className="icon-return" />
-              </Link>
             </div>
+            <Link to="/home">
+              <IoReturnUpBackSharp className="icon-return" />
+            </Link>
           </div>
           <div className="dados-usuario">
             <div className="container-dados-usuario">

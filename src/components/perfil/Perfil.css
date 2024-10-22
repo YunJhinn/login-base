@@ -1,27 +1,26 @@
 body {
-  background-image: linear-gradient(180deg, white, rgb(131, 230, 255));
+  background-color: white;
 }
 .perfil-superior {
   width: 600px;
   height: 350px;
   background-color: white;
-  border-right: 5px solid #00c8ee;
+  border-right: 5px solid #48718c;
 }
 .container-perfil {
   width: 100%;
 }
 .img-perfil-usuario {
-  background-color: #00c8ee;
+  background-color: #48718c;
   height: 120px;
   display: flex;
   flex-direction: row;
   padding: 10px;
-
-  align-items: center;
+  justify-content: space-between;
 }
 .dados-usuario img {
   border-radius: 50%;
-  transform: translateY(-50px);
+  transform: translateY(-60px);
   padding: 15px;
 }
 .dados-usuario {
@@ -30,6 +29,7 @@ body {
   justify-content: space-between;
 }
 .img-perfil-usuario h1 {
+  padding-top: 20px;
   text-align: center;
   color: white;
   font-weight: bolder;
@@ -47,7 +47,7 @@ body {
   align-items: center;
 }
 .charts-perfil {
-  border-top: 5px solid #00c8ee;
+  border-top: 5px solid #48718c;
   padding-top: 3rem;
   display: flex;
   flex-direction: row;
@@ -66,6 +66,6 @@ body {
   justify-content: space-between;
 }
 .icon-return {
-  font-size: 30px;
-  color: red;
+  font-size: 40px;
+  color: white;
 }
