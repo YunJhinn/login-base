@@ -1,4 +1,4 @@
-import Navbar from "../navbar";
+import Navbar from "../navbar/navbar.jsx";
 import "./TableIsc.css";
 import { MdVerifiedUser } from "react-icons/md";
 import { MdSmsFailed } from "react-icons/md";

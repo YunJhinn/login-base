@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../navbar";
+import Navbar from "../navbar/navbar.jsx";
 import "./createIsc.css";
 
 import axios from "axios";

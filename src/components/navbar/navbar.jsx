@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../components/login/navbar.css";
-import logo from "../assets/logopowertech.png";
+import "./navbar.css";
+import logo from "../../assets/logopowertech.png";
 import { useState } from "react";
 import { FaHome, FaUser } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";

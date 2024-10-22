@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../navbar";
+import Navbar from "../navbar/navbar.jsx";
 import api from "../../services/api.js";
 import "./getAllUsers.css";
 import Footer from "../footer/footer.jsx";

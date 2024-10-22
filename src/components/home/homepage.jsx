@@ -1,4 +1,4 @@
-import Navbar from "../navbar";
+import Navbar from "../navbar/navbar";
 import { Link } from "react-router-dom";
 import cardteste from "./cardteste.avif";
 import "./homepage.css";
