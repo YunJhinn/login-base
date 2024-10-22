@@ -12,7 +12,7 @@ import Bar from "../../Chart.jsx";
 import AreaChart from "../../AreaChart.jsx";
 import RadialBar from "../../RadialChart.jsx";
 import DonutCharts from "../../DonutCharts.jsx";
-import { IoReturnUpBackSharp } from "react-icons/io5";
+import { GiReturnArrow } from "react-icons/gi";
 
 const Perfil = () => {
   const [perfilUser, setPerfilUser] = useState(null);
@@ -53,7 +53,7 @@ const Perfil = () => {
               </div>
             </div>
             <Link to="/home">
-              <IoReturnUpBackSharp className="icon-return" />
+              <GiReturnArrow className="icon-return" />
             </Link>
           </div>
           <div className="dados-usuario">
