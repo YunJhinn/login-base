@@ -3,8 +3,8 @@ body {
 }
 .perfil-superior {
   width: 600px;
-  height: 350px;
-  background-color: white;
+  height: 340px;
+
   border-right: 5px solid #48718c;
 }
 .container-perfil {
@@ -21,9 +21,9 @@ body {
 .dados-usuario img {
   border-radius: 50%;
   transform: translateY(-60px);
-  padding: 15px;
 }
 .dados-usuario {
+  background-image: linear-gradient(to right, white, #48718c);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
