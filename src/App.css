@@ -16,10 +16,7 @@ body {
 }
 .App {
   display: flex;
-  justify-content: center;
-  align-items: center;
 
-  background-image: url("assets/newlogin.jpg");
   background-size: cover;
   background-position: center;
 }

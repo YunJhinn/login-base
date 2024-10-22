@@ -10,6 +10,7 @@ import TableIsc from "./components/ISC/TableIsc";
 import CreateIsc from "./components/createISC/CreateIsc";
 
 import GetAllUsers from "./components/allUsers/getAllUsers";
+import Perfil from "./components/perfil/Perfil";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/allusers",
     element: <GetAllUsers />,
+  },
+  {
+    path: "/perfil",
+    element: <Perfil />,
   },
 ]);
 

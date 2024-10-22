@@ -8,6 +8,7 @@ import { FaDailymotion } from "react-icons/fa";
 import { FaIdeal } from "react-icons/fa";
 import { FaNoteSticky } from "react-icons/fa6";
 import Bar from "../../Chart";
+import DonutCharts from "../../DonutCharts.jsx";
 
 import Line from "../../LineChart";
 import Area from "../../AreaChart";
@@ -62,9 +63,9 @@ const HomePage = () => {
       </div>
       <div className="charts-style">
         <Bar />
+        <DonutCharts />
         <Area />
         <Line />
-        <Area />
       </div>
       <div>
         <Footer />

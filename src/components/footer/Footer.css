@@ -7,9 +7,10 @@
   margin-top: 2rem;
   background-color: #48718c;
   position: relative;
-
+  background-position: bottom;
   padding: 1rem;
   padding-bottom: 2.1%;
+  margin-bottom: 0;
 }
 
 .icon-footer-facebook {
