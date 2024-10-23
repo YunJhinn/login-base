@@ -5,13 +5,13 @@ body {
   width: 600px;
   height: 340px;
 
-  border-right: 5px solid #48718c;
+  border-right: 5px solid #00c8ee;
 }
 .container-perfil {
   width: 100%;
 }
 .img-perfil-usuario {
-  background-color: #48718c;
+  background-color: #00c8ee;
   height: 120px;
   display: flex;
   flex-direction: row;
@@ -19,11 +19,13 @@ body {
   justify-content: space-between;
 }
 .dados-usuario img {
+  width: 110px;
   border-radius: 50%;
-  transform: translateY(-60px);
+  transform: translateY(-45px);
+  padding: 10px;
 }
 .dados-usuario {
-  background-image: linear-gradient(to right, white, #48718c);
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -47,7 +49,7 @@ body {
   align-items: center;
 }
 .charts-perfil {
-  border-top: 5px solid #48718c;
+  border-top: 5px solid #00c8ee;
   padding-top: 3rem;
   display: flex;
   flex-direction: row;

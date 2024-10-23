@@ -8,10 +8,10 @@ import { AiOutlineGlobal } from "react-icons/ai";
 import "./Perfil.css";
 import Navbar from "../navbar/navbar.jsx";
 import Footer from "../footer/footer.jsx";
-import Bar from "../../Chart.jsx";
-import AreaChart from "../../AreaChart.jsx";
-import RadialBar from "../../RadialChart.jsx";
-import DonutCharts from "../../DonutCharts.jsx";
+import Bar from "../CHARTS/Chart.jsx";
+import AreaChart from "../CHARTS/AreaChart.jsx";
+import RadialBar from "../CHARTS/RadialChart.jsx";
+import DonutCharts from "../CHARTS/DonutCharts.jsx";
 import { GiReturnArrow } from "react-icons/gi";
 
 const Perfil = () => {

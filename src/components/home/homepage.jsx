@@ -7,11 +7,11 @@ import { MdLeaderboard } from "react-icons/md";
 import { FaDailymotion } from "react-icons/fa";
 import { FaIdeal } from "react-icons/fa";
 import { FaNoteSticky } from "react-icons/fa6";
-import Bar from "../../Chart";
-import DonutCharts from "../../DonutCharts.jsx";
+import Bar from "../CHARTS/Chart.jsx";
+import DonutCharts from "../CHARTS/DonutCharts.jsx";
 
-import Line from "../../LineChart";
-import Area from "../../AreaChart";
+import Line from "../CHARTS/LineChart.jsx";
+import Area from "../CHARTS/AreaChart.jsx";
 import Footer from "../footer/footer";
 
 const HomePage = () => {
