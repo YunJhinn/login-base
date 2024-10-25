@@ -8,6 +8,8 @@ import { MdDashboard } from "react-icons/md";
 import api from "../../services/api.js";
 import { SiSpeedtest } from "react-icons/si";
 import { FaUsers } from "react-icons/fa";
+import { RiUserSearchFill } from "react-icons/ri";
+import { CgLogOff } from "react-icons/cg";
 
 const Navbar = () => {
   const [perfilUser, setPerfilUser] = useState([]);
@@ -38,7 +40,6 @@ const Navbar = () => {
   return (
     <div id="navbar">
       <img src={logo} alt="Logo PowerTech" />
-
       <nav>
         <ul>
           <li>
@@ -66,6 +67,12 @@ const Navbar = () => {
               SESMT
             </Link>
           </li>
+          <li>
+            <Link to={"/tbl-descontos"}>
+              <RiUserSearchFill className="icon" />
+              Clientes
+            </Link>
+          </li>
         </ul>
       </nav>
       <div className="perfil-navbar">
@@ -78,6 +85,9 @@ const Navbar = () => {
           <p>{perfilUser?.username || "Nome Usuário"}</p>
         </Link>
       </div>
+      <Link to="/">
+        <CgLogOff className="icon-logoff" />
+      </Link>
     </div>
   );
 };

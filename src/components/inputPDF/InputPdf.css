@@ -1,0 +1,57 @@
+.container-input-pdf {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+
+  flex-wrap: wrap;
+  gap: 60px;
+  background-image: linear-gradient(180deg, white, rgb(131, 230, 255));
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+}
+.form-upload-pdf {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  border: 4px solid white;
+  border-bottom: 10px solid #00c8ee;
+  justify-content: left;
+  font-size: 20px;
+  width: 500px;
+  height: 290px;
+  padding-top: 60px;
+  padding-left: 65px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input,
+select,
+textarea {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  padding: 5px;
+  border: 1.5px solid black;
+  border-radius: 5px;
+}
+.input-file {
+  margin: 15px;
+  color: black;
+  margin-left: 0;
+}
+
+.criar-pdf-btn {
+  background-color: green;
+  color: white;
+  width: 100px;
+  height: 40px;
+}
+
+.criar-pdf-btn:hover {
+  opacity: 0.8;
+  background-color: rgb(9, 223, 9);
+}

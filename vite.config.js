@@ -11,6 +11,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path, // Remove '/api' da URL
       },
+      "/local": {
+        target: "http://127.0.0.1:5000", // URL da sua API
+        changeOrigin: true,
+        rewrite: (path) => path, // Remove '/api' da URL
+      },
     },
   },
 });

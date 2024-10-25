@@ -13,6 +13,7 @@ import AreaChart from "../CHARTS/AreaChart.jsx";
 import RadialBar from "../CHARTS/RadialChart.jsx";
 import DonutCharts from "../CHARTS/DonutCharts.jsx";
 import { GiReturnArrow } from "react-icons/gi";
+import InputPdf from "../inputPDF/InputPdf.jsx";
 
 const Perfil = () => {
   const [perfilUser, setPerfilUser] = useState(null);
@@ -85,6 +86,7 @@ const Perfil = () => {
         </div>
         <div className="perfil-inferior">
           <h2>SERVIÇOSD PRESTADOS AQUI</h2>
+          <InputPdf />
           {perfilUser?.contratos?.lenght > 0 ? (
             perfilUser.contratos?.map((contrato, id_contrato) => (
               <ul>
