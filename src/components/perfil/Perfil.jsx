@@ -86,7 +86,7 @@ const Perfil = () => {
         </div>
         <div className="perfil-inferior">
           <h2>SERVIÇOSD PRESTADOS AQUI</h2>
-          <InputPdf />
+
           {perfilUser?.contratos?.lenght > 0 ? (
             perfilUser.contratos?.map((contrato, id_contrato) => (
               <ul>

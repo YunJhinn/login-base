@@ -48,6 +48,7 @@ const InputPdf = () => {
     <div className="container-input-pdf">
       <Navbar />
       <form onSubmit={uploadPdf} className="form-upload-pdf">
+        <h2>Verificar Cliente</h2>
         <label htmlFor="pdf-file">
           Insira o Arquivo PDF
           <input

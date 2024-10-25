@@ -27,6 +27,10 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.form-upload-pdf h2 {
+  padding-bottom: 35px;
+}
+
 form input,
 select,
 textarea {

@@ -14,22 +14,40 @@ const CreateIsc = ({ onIsAdded }) => {
     municipio: "",
     observacao_geral: "",
     tipo_servico: "",
+    imagens: [],
   });
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setNewIsc({
-      ...newIsc,
-      [name]: type === "checkbox" ? checked : value,
-    });
+    const { name, value, type, checked, files } = e.target;
+    if (type === "file") {
+      setNewIsc({
+        ...newIsc,
+        [name]: Array.from(files),
+      });
+    } else
+      setNewIsc({
+        ...newIsc,
+        [name]: type === "checkbox" ? checked : value,
+      });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const formData = new FormData();
+    for (const key in newIsc)
+      if (key === "imagens") {
+        newIsc.imagens.forEach((image) => {
+          formData.append("imagens", image);
+        });
+      } else {
+        formData.append(key, newIsc[key]);
+      }
     try {
-      const res = await axios.post("/api/create_isc", newIsc, {
+      const res = await axios.post("/api/create_isc", formData, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
+          "Content-Type": "multipart/form-data",
         },
       });
       onIsAdded(res.data);
@@ -42,6 +60,7 @@ const CreateIsc = ({ onIsAdded }) => {
         municipio: "",
         observacao_geral: "",
         tipo_servico: "",
+        imagens: [],
       });
     } catch (error) {
       console.error("Erro ao Adicionar Inspeção", error);
@@ -51,8 +70,9 @@ const CreateIsc = ({ onIsAdded }) => {
   return (
     <div className="container-c-isc">
       <Navbar />
-      <h2>Criar ISC</h2>
+
       <form className="form_c_isc" onSubmit={handleSubmit}>
+        <h2>Criar ISC</h2>
         <label htmlFor="id_local">
           ID local:
           <input
@@ -124,6 +144,16 @@ const CreateIsc = ({ onIsAdded }) => {
             name="n_conforme"
             checked={newIsc.n_conforme}
             onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="imagens">
+          Imagens:
+          <input
+            type="file"
+            name="imagens"
+            accept="image/*"
+            onChange={handleChange}
+            multiple
           />
         </label>
         <label htmlFor="observacao_geral">
