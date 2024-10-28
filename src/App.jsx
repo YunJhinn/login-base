@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 import Login from "./components/login/login";
 import HomePage from "./components/home/homepage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Navbar from "./components/navbar/navbar";
-import Chart from "react-apexcharts";
 
 import TableIsc from "./components/ISC/TableIsc";
 import CreateIsc from "./components/createISC/CreateIsc";

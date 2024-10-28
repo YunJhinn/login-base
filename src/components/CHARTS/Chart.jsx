@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
 import "./Chart.css";
+import { BiColor } from "react-icons/bi";
 
 class Bar extends Component {
   constructor(props) {
@@ -8,21 +9,46 @@ class Bar extends Component {
 
     this.state = {
       options: {
-        dataLabels: {
-          enabled: false,
+        chart: {
+          type: "bar",
+          stacked: true,
         },
         plotOptions: {
           bar: {
             horizontal: false,
+            dataLabels: {
+              position: "center",
+            },
           },
         },
         xaxis: {
-          categories: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          categories: [
+            "category A",
+            "category B",
+            "category C",
+            "adicional c",
+            "adicional c2",
+          ],
+        },
+        dataLabels: {
+          enabled: true,
+        },
+        stroke: {
+          width: 2,
+          fill: {
+            opacity: 1, // Opacidade das barras
+          },
+          colors: ["#FF4560", "#008FFB"],
         },
       },
       series: [
         {
-          data: [30, 40, 25, 50, 49, 21, 70, 51],
+          name: "Value",
+          data: [6653, 8133, 7132, 4567, 6899],
+        },
+        {
+          name: "Expected",
+          data: [5000, 7000, 5000, 7000, 10000],
         },
       ],
     };

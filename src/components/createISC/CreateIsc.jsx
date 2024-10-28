@@ -30,9 +30,11 @@ const CreateIsc = ({ onIsAdded }) => {
         [name]: type === "checkbox" ? checked : value,
       });
   };
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMessage("");
 
     const formData = new FormData();
     for (const key in newIsc)
@@ -64,7 +66,7 @@ const CreateIsc = ({ onIsAdded }) => {
       });
     } catch (error) {
       console.error("Erro ao Adicionar Inspeção", error);
-      alert("Erro ao Adicionar Inspeção,  tente novamente.");
+      setErrorMessage("Erro ao Adicionar Inspeção, tente novamente.");
     }
   };
   return (

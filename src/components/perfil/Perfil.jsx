@@ -6,14 +6,13 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { AiOutlineGlobal } from "react-icons/ai";
 import "./Perfil.css";
-import Navbar from "../navbar/navbar.jsx";
+
 import Footer from "../footer/footer.jsx";
 import Bar from "../CHARTS/Chart.jsx";
-import AreaChart from "../CHARTS/AreaChart.jsx";
+
 import RadialBar from "../CHARTS/RadialChart.jsx";
 import DonutCharts from "../CHARTS/DonutCharts.jsx";
 import { GiReturnArrow } from "react-icons/gi";
-import InputPdf from "../inputPDF/InputPdf.jsx";
 
 const Perfil = () => {
   const [perfilUser, setPerfilUser] = useState(null);
