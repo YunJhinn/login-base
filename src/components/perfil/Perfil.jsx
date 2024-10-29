@@ -25,6 +25,8 @@ const Perfil = () => {
     },
   };
 
+  let contratos = JSON.parse(localStorage.getItem("contratos")) || [];
+
   useEffect(() => {
     async function fetchPerfilUser() {
       try {
@@ -48,8 +50,10 @@ const Perfil = () => {
           <div className="img-perfil-usuario">
             <div className="perfil-nome-cargo">
               <div className="nome-cargo">
-                <h1>{perfilUser?.fullname || "Nome Usuário"}</h1>
-                <h2>{perfilUser?.cargo || "Cargo Usuário"}</h2>
+                <h1>
+                  {localStorage.getItem("nome_usuário") || "Nome Usuário"}
+                </h1>
+                <h2>{localStorage.getItem("perfil") || "Cargo Usuário"}</h2>
               </div>
             </div>
             <Link to="/home">
@@ -60,8 +64,8 @@ const Perfil = () => {
             <div className="container-dados-usuario">
               <p>
                 <GrStatusGood />
-                Status:
-                {perfilUser?.status || " Status Usuário"}
+                Nome Completo:
+                {localStorage.getItem("nome_completo") || " Status Usuário"}
               </p>
 
               <p>
@@ -77,30 +81,11 @@ const Perfil = () => {
               <p>
                 <AiOutlineGlobal />
                 Empresa:
-                {perfilUser?.empresa_nome || " empresa-usuário"}
+                {localStorage.getItem("empresa") || " empresa-usuário"}
               </p>
             </div>
-            <img src="https://www.gravatar.com/avatar/HASH" alt="" />
+            <img src={localStorage.getItem("foto-perfil")} alt="foto-usuário" />
           </div>
-        </div>
-        <div className="perfil-inferior">
-          <h2>SERVIÇOSD PRESTADOS AQUI</h2>
-
-          {perfilUser?.contratos?.lenght > 0 ? (
-            perfilUser.contratos?.map((contrato, id_contrato) => (
-              <ul>
-                <li key={id_contrato}>
-                  {contrato.cliente || "Cliente do Contrato"}
-                </li>
-                <li>{contrato.data_cadastro || "Data do pedido"}</li>
-                <li>{contrato.data_conclusao || "Data da Conclusão"}</li>
-                <li>{contrato.empresa_nome || "Empresa Responsável"}</li>
-                <li>{contrato.nome || "Funcionário Responsável"}</li>
-              </ul>
-            ))
-          ) : (
-            <p>Não Há contratos disponiveis</p>
-          )}
         </div>
       </div>
       <div className="charts-perfil">
@@ -108,6 +93,7 @@ const Perfil = () => {
         <DonutCharts />
         <Bar />
       </div>
+
       <Footer />
     </div>
   );

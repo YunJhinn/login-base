@@ -77,12 +77,12 @@ const Navbar = () => {
       </nav>
       <div className="perfil-navbar">
         <img
-          src="https://www.gravatar.com/avatar/HASH"
-          alt="imagem teste"
+          src={localStorage.getItem("foto")}
+          alt="foto-usuario"
           className="img-perfil"
         />
         <Link to={"/perfil"}>
-          <p>{perfilUser?.username || "Nome Usuário"}</p>
+          <p>{localStorage.getItem("nome_usuário") || "Nome Usuário"}</p>
         </Link>
       </div>
       <Link to="/">

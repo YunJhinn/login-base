@@ -23,6 +23,15 @@ const Login = () => {
       });
 
       localStorage.setItem("token", response.data.token);
+      localStorage.setItem("foto-perfil", response.data.foto);
+      localStorage.setItem("empresa", response.data.empresa);
+      localStorage.setItem("nome_usuário", response.data.username);
+      localStorage.setItem("nome_completo", response.data.fullname);
+      localStorage.setItem("perfil", response.data.perfil);
+      localStorage.setItem(
+        "contratos",
+        JSON.stringify(response.data.contratos)
+      );
 
       console.log("Login Bem Sucedido", response.data);
       navigate("/home");
