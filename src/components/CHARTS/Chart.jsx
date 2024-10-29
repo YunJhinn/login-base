@@ -12,6 +12,7 @@ class Bar extends Component {
         chart: {
           type: "bar",
           stacked: true,
+          stackType: "100%",
         },
         plotOptions: {
           bar: {
@@ -23,11 +24,11 @@ class Bar extends Component {
         },
         xaxis: {
           categories: [
-            "category A",
-            "category B",
-            "category C",
-            "adicional c",
-            "adicional c2",
+            "Municipio A",
+            "Municipio B",
+            "Municipio C",
+            "Municipio c",
+            "Municipio c2",
           ],
         },
         dataLabels: {
@@ -42,8 +43,12 @@ class Bar extends Component {
       },
       series: [
         {
-          name: "Value",
+          name: "Conformes",
           data: [6653, 8133, 7132, 4567, 6899],
+        },
+        {
+          name: "Não Conformes",
+          data: [5000, 5000, 5000, 5000, 5000],
         },
       ],
     };

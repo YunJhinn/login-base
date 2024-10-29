@@ -10,7 +10,6 @@ import "./Perfil.css";
 import Footer from "../footer/footer.jsx";
 import Bar from "../CHARTS/Chart.jsx";
 
-import RadialBar from "../CHARTS/RadialChart.jsx";
 import DonutCharts from "../CHARTS/DonutCharts.jsx";
 import { GiReturnArrow } from "react-icons/gi";
 

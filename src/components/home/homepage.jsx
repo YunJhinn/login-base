@@ -14,6 +14,9 @@ import Line from "../CHARTS/LineChart.jsx";
 import Area from "../CHARTS/AreaChart.jsx";
 import Footer from "../footer/footer";
 
+import ChartBar from "../CHARTS/ChartBar.jsx";
+import SyncronizeCharts from "../CHARTS/SyncronizeCharts.jsx";
+
 const HomePage = () => {
   return (
     <div className="containerHome">
@@ -62,7 +65,8 @@ const HomePage = () => {
         </div>
       </div>
       <div className="charts-style">
-        <Bar />
+        <ChartBar />
+        <SyncronizeCharts />
         <DonutCharts />
         <Area />
         <Line />

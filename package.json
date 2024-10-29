@@ -13,6 +13,7 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^6.1.5",
+    "@mui/x-charts": "^7.22.0",
     "@react-icons/all-files": "^4.1.0",
     "apexcharts": "^3.54.1",
     "axios": "^0.27.2",
