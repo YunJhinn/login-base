@@ -87,44 +87,43 @@ const Perfil = () => {
             <img src={localStorage.getItem("foto-perfil")} alt="foto-usuário" />
           </div>
         </div>
-        <div className="perfil-inferior">
-          <h2>Contratos</h2>
-
-          {contratos?.length > 0 ? (
-            contratos.map((contrato, id_contrato) => (
-              <table>
-                <thead>
-                  <tr key={id_contrato.empresa_id}>
-                    <th>Cliente</th>
-                    <th>Data do Pedido</th>
-                    <th>Data da Conclusão</th>
-                    <th>Empresa Responsável</th>
-                    <th>Funcionário Responsável</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>{contrato.cliente || "Cliente do Contrato"}</td>
-                    <td>{contrato.data_assinatura || "Data do pedido"}</td>
-                    <td>{contrato.data_conclusao || "Data da Conclusão"}</td>
-                    <td>{contrato.empresa_nome || "Empresa Responsável"}</td>
-                    <td>
-                      {contrato.cadastrado_por.$oid ||
-                        "Funcionário Responsável"}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            ))
-          ) : (
-            <p>Não Há contratos disponiveis</p>
-          )}
+        <div className="charts-perfil">
+          <DonutCharts />
+          <Bar />
         </div>
       </div>
-      <div className="charts-perfil">
-        <RadialBar />
-        <DonutCharts />
-        <Bar />
+
+      <div className="perfil-inferior">
+        <h2>Contratos</h2>
+
+        {contratos?.length > 0 ? (
+          <table>
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Data do Pedido</th>
+                <th>Data da Conclusão</th>
+                <th>Empresa Responsável</th>
+                <th>Funcionário Responsável</th>
+              </tr>
+            </thead>
+            <tbody>
+              {contratos.map((contrato, id_contrato) => (
+                <tr key={id_contrato._id}>
+                  <td>{contrato.cliente || "Cliente do Contrato"}</td>
+                  <td>{contrato.data_assinatura || "Data do pedido"}</td>
+                  <td>{contrato.data_conclusao || "Data da Conclusão"}</td>
+                  <td>{contrato.empresa_nome || "Empresa Responsável"}</td>
+                  <td>
+                    {contrato.cadastrado_por.$oid || "Funcionário Responsável"}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : (
+          <p>Não Há contratos disponiveis</p>
+        )}
       </div>
       <Footer />
     </div>

@@ -15,7 +15,7 @@ class Bar extends Component {
         },
         plotOptions: {
           bar: {
-            horizontal: false,
+            horizontal: true,
             dataLabels: {
               position: "center",
             },
@@ -38,17 +38,12 @@ class Bar extends Component {
           fill: {
             opacity: 1, // Opacidade das barras
           },
-          colors: ["#FF4560", "#008FFB"],
         },
       },
       series: [
         {
           name: "Value",
           data: [6653, 8133, 7132, 4567, 6899],
-        },
-        {
-          name: "Expected",
-          data: [5000, 7000, 5000, 7000, 10000],
         },
       ],
     };

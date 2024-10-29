@@ -2,10 +2,10 @@ body {
   background-color: white;
 }
 .perfil-superior {
-  width: 600px;
-  height: 340px;
-
   border-right: 5px solid #00c8ee;
+
+  width: 600px;
+  height: 360px;
 }
 .container-perfil {
   width: 100%;
@@ -49,10 +49,10 @@ body {
   align-items: center;
 }
 .charts-perfil {
-  border-top: 5px solid #00c8ee;
-  padding-top: 3rem;
   display: flex;
   flex-direction: row;
+  gap: 250px;
+
   justify-content: space-around;
 }
 .perfis-ambos {
@@ -60,6 +60,8 @@ body {
   flex-direction: row;
 }
 .perfil-inferior {
+  padding-top: 2rem;
+  border-top: 5px #00c8ee solid;
   padding-left: 3rem;
 }
 .perfil-nome-cargo {
