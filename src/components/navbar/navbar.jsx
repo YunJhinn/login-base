@@ -48,7 +48,7 @@ const Navbar = () => {
       />{" "}
       {/* Botão de menu */}
       <nav>
-        <ul>
+        <ul className={menuOpen ? "active" : ""}>
           <li>
             <Link to={"/home"}>
               <FaHome className="icon" />
