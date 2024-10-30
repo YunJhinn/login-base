@@ -1,0 +1,10 @@
+.container-dashboards {
+  width: 100%;
+
+  min-height: 100vh;
+  margin-top: 4rem;
+}
+.charts-dashboard {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,7 +1,32 @@
-ul {
+nav ul {
   display: flex;
   list-style: none;
-  gap: 1rem;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* Escondido por padrão em telas menores */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  /* Exibir menu quando a classe 'active' for adicionada */
+  nav ul.active {
+    display: flex;
+  }
+
+  /* Ajusta o layout para o ícone de menu */
+  .menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
 }
 
 li {
@@ -67,4 +92,11 @@ img {
 .icon-logoff {
   color: white;
   font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  .perfil-navbar,
+  .icon-logoff {
+    display: none;
+  }
 }

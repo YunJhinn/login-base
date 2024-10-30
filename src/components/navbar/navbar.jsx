@@ -10,11 +10,13 @@ import { SiSpeedtest } from "react-icons/si";
 import { FaUsers } from "react-icons/fa";
 import { RiUserSearchFill } from "react-icons/ri";
 import { CgLogOff } from "react-icons/cg";
+import { FiMenu } from "react-icons/fi";
 
 const Navbar = () => {
   const [perfilUser, setPerfilUser] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   let config = {
     headers: {
@@ -38,8 +40,13 @@ const Navbar = () => {
     fetchPerfilUser();
   }, []);
   return (
-    <div id="navbar">
+    <div id="navbar" position="static" maxWidith="xl">
       <img src={logo} alt="Logo PowerTech" />
+      <FiMenu
+        className="menu-icon"
+        onClick={() => setMenuOpen(!menuOpen)}
+      />{" "}
+      {/* Botão de menu */}
       <nav>
         <ul>
           <li>
@@ -49,7 +56,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to={"/"}>
+            <Link to={"/dashboards"}>
               <MdDashboard className="icon" />
               Dashboard
             </Link>

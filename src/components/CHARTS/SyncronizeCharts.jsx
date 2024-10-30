@@ -11,7 +11,7 @@ export default function SyncronizeCharts() {
     <Stack
       direction={{ xs: "column", xl: "row" }}
       spacing={1}
-      sx={{ width: "100%" }}
+      sx={{ width: 800 }}
     >
       <BarChart
         {...barChartsProps}
@@ -30,13 +30,15 @@ export default function SyncronizeCharts() {
 const barChartsProps = {
   series: [
     {
-      data: [3, 4, 1, 6, 5],
+      data: [4, 1, 6, 5],
       id: "sync",
       highlightScope: { highlight: "item", fade: "global" },
     },
   ],
-  xAxis: [{ scaleType: "band", data: ["A", "B", "C", "D", "E"] }],
-  height: 400,
+  xAxis: [
+    { scaleType: "band", data: ["Orixiguiná", "Faro", "Terra Santa", "Total"] },
+  ],
+  height: 300,
   slotProps: {
     legend: {
       hidden: true,
@@ -49,16 +51,15 @@ const pieChartProps = {
     {
       id: "sync",
       data: [
-        { value: 3, label: "A", id: "A" },
-        { value: 4, label: "B", id: "B" },
-        { value: 1, label: "C", id: "C" },
-        { value: 6, label: "D", id: "D" },
-        { value: 5, label: "E", id: "E" },
+        { value: 4, label: "Orixiguiná", id: "Orixiguiná" },
+        { value: 1, label: "Faro", id: "Faro" },
+        { value: 6, label: "Terra Santa", id: "Terra Santa" },
+        { value: 5, label: "Total", id: "Total" },
       ],
       highlightScope: { highlight: "item", fade: "global" },
     },
   ],
-  height: 400,
+  height: 270,
   slotProps: {
     legend: {
       hidden: true,

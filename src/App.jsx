@@ -10,6 +10,7 @@ import CreateIsc from "./components/createISC/CreateIsc";
 import GetAllUsers from "./components/allUsers/getAllUsers";
 import Perfil from "./components/perfil/Perfil";
 import InputPdf from "./components/inputPDF/InputPdf";
+import Dashboards from "./components/Dashboards/Dashboards";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "/tbl-descontos",
     element: <InputPdf />,
+  },
+  {
+    path: "/dashboards",
+    element: <Dashboards />,
   },
 ]);
 
