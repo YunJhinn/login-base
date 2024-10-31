@@ -40,7 +40,7 @@ const Navbar = () => {
     fetchPerfilUser();
   }, []);
   return (
-    <div id="navbar" position="static" maxWidith="xl">
+    <div id="navbar" position="static">
       <img src={logo} alt="Logo PowerTech" />
       <FiMenu
         className="menu-icon"
