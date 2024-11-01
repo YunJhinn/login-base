@@ -12,6 +12,7 @@ import Navbar from "../navbar/navbar";
 import "./Dashboards.css";
 import api from "../../services/api.js";
 import { green } from "@mui/material/colors";
+import TreeLineChart from "../CHARTS/TreeLineChart.jsx";
 
 const Dashboards = () => {
   const [users, setUsers] = useState([]);
@@ -87,7 +88,7 @@ const Dashboards = () => {
         <h2>DASHBOARDS</h2>
 
         <SyncronizeCharts />
-        <LineChart />
+        <TreeLineChart />
       </div>
       <div className="table-empresas">
         <h2>Usuários</h2>

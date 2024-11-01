@@ -5,7 +5,7 @@
   justify-content: center;
   width: 100%;
   margin-top: 2rem;
-  background-color: #48718c;
+  background-image: linear-gradient(#00cbe8, #0ccc84);
   position: relative;
   background-position: bottom;
   padding: 1rem;
@@ -61,11 +61,11 @@
   border-radius: 15px;
 }
 .container-footer h2 {
-  color: white;
+  color: black;
   padding-top: 2rem;
 }
 .container-footer p {
-  color: white;
+  color: black;
   padding: 5px;
   font-size: 17px;
 }

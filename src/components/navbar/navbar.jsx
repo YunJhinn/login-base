@@ -84,7 +84,10 @@ const Navbar = () => {
       </nav>
       <div className="perfil-navbar">
         <img
-          src={localStorage.getItem("foto")}
+          src={
+            localStorage.getItem("foto") ||
+            "https://www.gravatar.com/avatar/HASH"
+          }
           alt="foto-usuario"
           className="img-perfil"
         />
