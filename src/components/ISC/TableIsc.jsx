@@ -78,15 +78,19 @@ const TableIsc = () => {
             <tbody>
               {inspecoes.map((isc) => (
                 <tr key={isc._id?.$oid || "N/A"}>
-                  <td>{isc.id_local?.$oid || "N/A"}</td>
+                  <td>{isc.id_local || "N/A"}</td>
                   <td>{isc.contrato?.$oid || "N/A"}</td>
                   <td>
-                    {isc.data ? new Date(isc.data).toLocaleDateString() : "N/A"}
+                    {isc.data
+                      ? new Date(
+                          parseInt(isc.data.$date.$numberLong)
+                        ).toLocaleString("pt-BR")
+                      : "N/A"}
                   </td>
                   <td>{isc.n_conforme}</td>
                   <td>{isc.local}</td>
                   <td>{isc.tipo_servico}</td>
-                  <td>{isc.matricula}</td>
+                  <td>{isc.user_id.$oid}</td>
                   <td>{isc.detalhes}</td>
                 </tr>
               ))}
