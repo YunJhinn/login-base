@@ -81,3 +81,21 @@ td {
   opacity: 1;
   background-color: rgb(9, 223, 9);
 }
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding-left: 5%;
+  padding-top: 50px;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+.filters select {
+  color: black;
+}
+
+.filters options {
+  background-color: white;
+}

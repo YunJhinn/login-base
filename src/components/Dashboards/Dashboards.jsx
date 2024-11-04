@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import ChartBar from "../CHARTS/ChartBar";
+
 import SyncronizeCharts from "../CHARTS/SyncronizeCharts";
-import LineChart from "../CHARTS/LineChart";
+
 import { GiProfit } from "react-icons/gi";
 import { MdLeaderboard } from "react-icons/md";
 import { FaDailymotion } from "react-icons/fa";
@@ -11,7 +11,7 @@ import Footer from "../footer/footer";
 import Navbar from "../navbar/navbar";
 import "./Dashboards.css";
 import api from "../../services/api.js";
-import { green } from "@mui/material/colors";
+
 import TreeLineChart from "../CHARTS/TreeLineChart.jsx";
 
 const Dashboards = () => {
@@ -59,7 +59,7 @@ const Dashboards = () => {
           <h2>Contratos</h2>
           <p>
             <MdLeaderboard />
-            67.67%
+            8999
           </p>
         </div>
         <div className="cardstyle">
