@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import logo from "../../assets/logopowertech.png";
-import { useState, useEffect } from "react";
 import { FaHome, FaUser } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
 import api from "../../services/api.js";
@@ -17,6 +16,7 @@ const Navbar = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false); // Estado para o dropdown
 
   let config = {
     headers: {
@@ -39,14 +39,12 @@ const Navbar = () => {
     }
     fetchPerfilUser();
   }, []);
+
   return (
     <div id="navbar" position="static">
       <img src={logo} alt="Logo PowerTech" />
-      <FiMenu
-        className="menu-icon"
-        onClick={() => setMenuOpen(!menuOpen)}
-      />{" "}
-      {/* Botão de menu */}
+      <FiMenu className="menu-icon" onClick={() => setMenuOpen(!menuOpen)} />
+
       <nav>
         <ul className={menuOpen ? "active" : ""}>
           <li>
@@ -61,7 +59,6 @@ const Navbar = () => {
               Dashboard
             </Link>
           </li>
-
           <li>
             <Link to={"/allusers"}>
               <FaUsers className="icon" />
@@ -82,6 +79,7 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
+
       <div className="perfil-navbar">
         <img
           src={
@@ -90,14 +88,22 @@ const Navbar = () => {
           }
           alt="foto-usuario"
           className="img-perfil"
+          onClick={() => setDropdownOpen(!dropdownOpen)} // Abre/fecha dropdown
         />
-        <Link to={"/perfil"}>
-          <p>{localStorage.getItem("nome_usuário") || "Nome Usuário"}</p>
-        </Link>
+
+        {dropdownOpen && (
+          <div className="dropdown-menu">
+            <Link to="/perfil" className="dropdown-item">
+              <FaUser className="dropdown-icon" />
+              Perfil
+            </Link>
+            <Link to="/" className="dropdown-item">
+              <CgLogOff className="dropdown-icon" />
+              Logoff
+            </Link>
+          </div>
+        )}
       </div>
-      <Link to="/">
-        <CgLogOff className="icon-logoff" />
-      </Link>
     </div>
   );
 };

@@ -16,61 +16,24 @@ import Footer from "../footer/footer";
 
 import ChartBar from "../CHARTS/ChartBar.jsx";
 import SyncronizeCharts from "../CHARTS/SyncronizeCharts.jsx";
+import Carroussel from "../carroussel/Carroussel.jsx";
+import PoliticaIntegrada from "../poli-integrada/PoliticaIntegrada.jsx";
 
 const HomePage = () => {
   return (
     <div className="containerHome">
       <Navbar />
-      <h1>CRM</h1>
-      <div className="cards">
-        <div className="cardstyle">
-          <h2>Anual Profit</h2>
+      <h1>CONHEÇA A MW</h1>
 
-          <p>
-            <GiProfit className="icon-card" />
-            1987.23
-          </p>
-        </div>
-
-        <div className="cardstyle">
-          <h2>Lead Conversation</h2>
-          <p>
-            <MdLeaderboard />
-            32.89%
-          </p>
-        </div>
-
-        <div className="cardstyle">
-          <h2>Daily Average Income</h2>
-          <p>
-            <FaDailymotion />
-            $1,956.5
-          </p>
-        </div>
-
-        <div className="cardstyle">
-          <h2>Anual Deals</h2>
-          <p>
-            <FaIdeal />
-            2,589
-          </p>
-        </div>
-
-        <div className="cardstyle">
-          <h2>Test</h2>
-          <p>
-            <FaNoteSticky />
-            teste 1
-          </p>
-        </div>
+      <div className="carroussel">
+        <Carroussel />
       </div>
-      <div className="charts-style">
-        <ChartBar />
-        <SyncronizeCharts />
-        <DonutCharts />
-        <Area />
-        <Line />
+
+      <h2>Politica Integrada</h2>
+      <div className="equipe">
+        <PoliticaIntegrada />
       </div>
+
       <div>
         <Footer />
       </div>
