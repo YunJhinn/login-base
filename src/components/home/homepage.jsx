@@ -30,7 +30,7 @@ const HomePage = () => {
       </div>
 
       <h2>Politica Integrada</h2>
-      <div className="equipe">
+      <div className="politica">
         <PoliticaIntegrada />
       </div>
 
