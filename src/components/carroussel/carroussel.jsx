@@ -44,9 +44,9 @@ const Carroussel = () => {
 
     const interval = setInterval(() => {
       setSlideIndex((prevIndex) => (prevIndex % 3) + 1);
-    }, 5000); // Muda o slide a cada 3 segundos
+    }, 5000);
 
-    return () => clearInterval(interval); // Limpa o intervalo ao desmontar
+    return () => clearInterval(interval);
   }, [slideIndex]);
 
   return (
@@ -55,19 +55,19 @@ const Carroussel = () => {
         <div className="mySlides fade" style={{ display: "block" }}>
           <div className="numbertext">1 / 3</div>
           <img src={img1} style={{ width: "100%" }} alt="Slide 1" />
-          <div className="text">Caption Text</div>
+          <div className="text">Análise</div>
         </div>
 
         <div className="mySlides fade" style={{ display: "none" }}>
           <div className="numbertext">2 / 3</div>
           <img src={img2} style={{ width: "100%" }} alt="Slide 2" />
-          <div className="text">Caption Two</div>
+          <div className="text">Competência</div>
         </div>
 
         <div className="mySlides fade" style={{ display: "none" }}>
           <div className="numbertext">3 / 3</div>
           <img src={img3} style={{ width: "100%" }} alt="Slide 3" />
-          <div className="text">Caption Three</div>
+          <div className="text">Qualidade</div>
         </div>
 
         <a className="prev" onClick={() => plusSlides(-1)}>
