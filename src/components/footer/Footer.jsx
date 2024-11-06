@@ -17,7 +17,7 @@ const Footer = () => {
 
         <p>
           <LiaPhoneSolid aria-label="Telefone" className="icon-footer-phone" />
-          Telefone:{"  4002-8922"}
+          Telefone:{"  3207-1621"}
         </p>
         <p>
           <FaWhatsapp aria-label="WhatsApp" className="icon-footer-wpp" />
@@ -25,7 +25,7 @@ const Footer = () => {
         </p>
         <p>
           <SiGmail aria-label="E-mail" className="icon-footer-email" />
-          E-mail:{"  MWadm@gmail.com"}
+          E-mail:{"  mw@mwprojetos.com.br"}
         </p>
       </div>
       <div className="servicos">
