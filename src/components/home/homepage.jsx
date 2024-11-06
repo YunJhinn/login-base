@@ -18,6 +18,7 @@ import ChartBar from "../CHARTS/ChartBar.jsx";
 import SyncronizeCharts from "../CHARTS/SyncronizeCharts.jsx";
 import Carroussel from "../carroussel/Carroussel.jsx";
 import PoliticaIntegrada from "../poli-integrada/PoliticaIntegrada.jsx";
+import UsersHome from "../usersHome/UsersHome.jsx";
 
 const HomePage = () => {
   return (
@@ -33,7 +34,10 @@ const HomePage = () => {
       <div className="politica">
         <PoliticaIntegrada />
       </div>
-
+      <h2>Nossa Equipe</h2>
+      <div className="users-home">
+        <UsersHome />
+      </div>
       <div>
         <Footer />
       </div>

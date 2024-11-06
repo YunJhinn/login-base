@@ -1,0 +1,37 @@
+.container-users-home {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.card-usuarios-home {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border: 1px solid black;
+  border-bottom-right-radius: 15px;
+  box-shadow: 5px 10px grey;
+  border-right: 6px solid black;
+  padding: 10px;
+}
+
+.card-usuarios-home:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 15px rgb(56, 56, 56);
+}
+
+.card-usuarios-home img {
+  width: 130px;
+  height: 130px;
+}
+
+.nome-cargo-users-home {
+  padding-left: 8px;
+}
+
+.nome-cargo-users-home p {
+  padding-top: 20px;
+}
