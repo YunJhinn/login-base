@@ -15,7 +15,6 @@ body {
   padding-bottom: 30px;
   margin-top: 80px;
   margin-bottom: 5px;
-  border-bottom: 5px solid #00cbe8;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   text-align: left;
@@ -71,6 +70,11 @@ body {
 .cardstyle p {
   font-size: 1.25rem;
   color: black;
+}
+
+.equipe {
+  padding-bottom: 30px;
+  margin-bottom: 5px;
 }
 
 /* Icon styles */
