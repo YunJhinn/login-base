@@ -44,8 +44,8 @@ const UsersHome = () => {
               alt="imagem teste"
             />
             <div className="nome-cargo-users-home">
-              <h2>Nome: {user.fullname || "N/A"}</h2>
-              <p>Cargo: {user.cargo || "N/A"}</p>
+              <h2> {user.fullname || "N/A"}</h2>
+              <p> {user.cargo || "N/A"}</p>
             </div>
           </div>
         ))

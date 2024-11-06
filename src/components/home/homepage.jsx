@@ -30,7 +30,7 @@ const HomePage = () => {
         <Carroussel />
       </div>
 
-      <h2>Politica Integrada</h2>
+      <h2 className="h2-titulo">Politica Integrada</h2>
       <div className="politica">
         <PoliticaIntegrada />
       </div>
