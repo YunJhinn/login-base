@@ -49,6 +49,7 @@
   .container-users-home {
     height: auto;
     padding-top: 30px;
+    padding-bottom: 30px;
     gap: 30px;
     border-radius: 40px 0 40px 0;
   }
@@ -60,8 +61,8 @@
   }
 
   .card-usuarios-home img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 
   .nome-cargo-users-home p {

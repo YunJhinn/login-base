@@ -79,7 +79,7 @@
 /* Responsividade para telas pequenas */
 @media (max-width: 768px) {
   .container-users {
-    padding-top: 5%;
+    padding-top: 20%;
     gap: 20px;
   }
 
