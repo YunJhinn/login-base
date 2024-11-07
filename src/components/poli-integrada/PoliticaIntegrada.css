@@ -69,6 +69,10 @@
     gap: 15px;
     padding-top: 30px;
   }
+  .icons-policy {
+    color: white;
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -85,5 +89,9 @@
 
   .card-politica {
     padding-top: 20px;
+  }
+  .icons-policy {
+    color: white;
+    font-size: 30px;
   }
 }
