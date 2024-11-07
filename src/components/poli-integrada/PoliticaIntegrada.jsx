@@ -13,34 +13,34 @@ const PoliticaIntegrada = () => {
     <div className="container-politica">
       <div className="card-politica">
         <div className="card-politica-style-1">
-        <FcStatistics />
+          <FcStatistics className="icons-policy" />
           <h2>Melhoria Contínua do SGI</h2>
         </div>
         <div className="card-politica-style-2">
-        <MdPolicy />
+          <MdPolicy className="icons-policy" />
           <h2>Cumprimento dos requisitos legais e outros pertinentes</h2>
         </div>
         <div className="card-politica-style-3">
-        <CgDanger />
+          <CgDanger className="icons-policy" />
           <h2>Eliminar perigos e reduzir riscos</h2>
         </div>
         <div className="card-politica-style-4">
-        <MdHealthAndSafety />
+          <MdHealthAndSafety className="icons-policy" />
           <h2>
             Proporcionar condições seguras e saudáveis, prevenindo lesóes e
             problemas de saúde
           </h2>
         </div>
         <div className="card-politica-style-5">
-        <RiTeamFill />
+          <RiTeamFill className="icons-policy" />
           <h2>Consulta e participação dos trabalhadores</h2>
         </div>
         <div className="card-politica-style-6">
-        <MdHighQuality />
+          <MdHighQuality className="icons-policy" />
           <h2>Qualidade dos serviçoes realizados</h2>
         </div>
         <div className="card-politica-style-7">
-        <PiTreeBold />
+          <PiTreeBold className="icons-policy" />
           <h2>Prevenção da poluição e proteção do meio ambiente</h2>
         </div>
       </div>

@@ -20,7 +20,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 25px;
   color: white;
   border-radius: 0 100px 100px 0;
 }
@@ -45,6 +45,11 @@
 }
 .card-politica-style-7 {
   background-color: green;
+}
+
+.icons-policy {
+  color: white;
+  font-size: 60px;
 }
 
 @media (max-width: 768px) {
