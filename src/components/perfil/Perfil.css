@@ -1,15 +1,17 @@
 body {
   background-color: white;
 }
+
 .perfil-superior {
   border-right: 5px solid #00c8ee;
-
   width: 600px;
   height: 360px;
 }
+
 .container-perfil {
   width: 100%;
 }
+
 .img-perfil-usuario {
   background-color: #00c8ee;
   height: 120px;
@@ -18,24 +20,28 @@ body {
   padding: 10px;
   justify-content: space-between;
 }
+
 .dados-usuario img {
   width: 110px;
   border-radius: 50%;
   transform: translateY(-45px);
   padding: 10px;
 }
+
 .dados-usuario {
   background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .img-perfil-usuario h1 {
   padding-top: 20px;
   text-align: center;
   color: white;
   font-weight: bolder;
 }
+
 .img-perfil-usuario h2 {
   color: white;
   padding-left: 10px;
@@ -48,28 +54,101 @@ body {
   padding: 10px;
   align-items: center;
 }
+
 .charts-perfil {
   display: flex;
   flex-direction: row;
   gap: 250px;
-
   justify-content: space-around;
 }
+
 .perfis-ambos {
   display: flex;
   flex-direction: row;
 }
+
 .perfil-inferior {
   padding-top: 2rem;
   border-top: 5px #00c8ee solid;
   padding-left: 3rem;
 }
+
 .perfil-nome-cargo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .icon-return {
   font-size: 30px;
   color: white;
+}
+
+/* Responsividade */
+
+/* Telas menores que 768px (Tablets e Celulares) */
+@media (max-width: 768px) {
+  .perfil-superior {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 5px solid #00c8ee;
+  }
+
+  .img-perfil-usuario {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dados-usuario {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .charts-perfil {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .perfil-inferior {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+  }
+
+  .perfil-nome-cargo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .container-dados-usuario p {
+    font-size: 16px;
+    padding: 5px;
+  }
+}
+
+/* Telas menores que 480px (Celulares) */
+@media (max-width: 480px) {
+  .dados-usuario img {
+    width: 90px;
+  }
+
+  .img-perfil-usuario h1 {
+    font-size: 1.5rem;
+  }
+
+  .img-perfil-usuario h2 {
+    font-size: 1.2rem;
+  }
+
+  .container-dados-usuario p {
+    font-size: 14px;
+  }
+
+  .icon-return {
+    font-size: 24px;
+  }
 }
