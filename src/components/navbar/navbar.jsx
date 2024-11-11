@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import logo from "../../assets/logopowertech.png";
-import { FaHome, FaUser } from "react-icons/fa";
+import { FaHome, FaUser, FaUsers } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
-import api from "../../services/api.js";
 import { SiSpeedtest } from "react-icons/si";
-import { FaUsers } from "react-icons/fa";
 import { RiUserSearchFill } from "react-icons/ri";
 import { CgLogOff } from "react-icons/cg";
 import { FiMenu } from "react-icons/fi";
+import api from "../../services/api.js";
 
 const Navbar = () => {
   const [perfilUser, setPerfilUser] = useState([]);
@@ -17,8 +16,9 @@ const Navbar = () => {
   const [error, setError] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false); // Estado para o dropdown
+  const dropdownRef = useRef(null); // Referência ao dropdown
 
-  let config = {
+  const config = {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("token"),
     },
@@ -38,6 +38,19 @@ const Navbar = () => {
       }
     }
     fetchPerfilUser();
+  }, []);
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   return (
@@ -80,7 +93,7 @@ const Navbar = () => {
         </ul>
       </nav>
 
-      <div className="perfil-navbar">
+      <div className="perfil-navbar" ref={dropdownRef}>
         <img
           src={
             localStorage.getItem("foto") ||
