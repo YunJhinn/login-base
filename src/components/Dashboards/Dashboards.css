@@ -1,6 +1,6 @@
 .container-dashboards {
   width: 100%;
-
+  background-color: rgb(223, 221, 221);
   min-height: 100vh;
   margin-top: 4rem;
 }

@@ -3,9 +3,11 @@ body {
 }
 
 .perfil-superior {
-  border-right: 5px solid #00c8ee;
-  width: 600px;
-  height: 360px;
+  background-color: rgb(223, 221, 221);
+  width: auto;
+  height: auto;
+  border: 1px solid red;
+  width: 1auto;
 }
 
 .container-perfil {
@@ -13,7 +15,7 @@ body {
 }
 
 .img-perfil-usuario {
-  background-color: #00c8ee;
+  background-color: rgb(223, 221, 221);
   height: 120px;
   display: flex;
   flex-direction: row;
@@ -69,7 +71,7 @@ body {
 
 .perfil-inferior {
   padding-top: 2rem;
-  border-top: 5px #00c8ee solid;
+
   padding-left: 3rem;
 }
 
@@ -84,9 +86,6 @@ body {
   color: white;
 }
 
-/* Responsividade */
-
-/* Telas menores que 768px (Tablets e Celulares) */
 @media (max-width: 768px) {
   .perfil-superior {
     width: 100%;

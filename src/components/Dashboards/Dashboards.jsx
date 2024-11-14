@@ -76,13 +76,6 @@ const Dashboards = () => {
             2,589
           </p>
         </div>
-        <div className="cardstyle">
-          <h2>Test</h2>
-          <p>
-            <FaNoteSticky />
-            teste 1
-          </p>
-        </div>
       </div>
       <div className="charts-dashboard">
         <h2>DASHBOARDS</h2>

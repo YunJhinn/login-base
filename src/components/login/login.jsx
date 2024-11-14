@@ -43,10 +43,6 @@ const Login = () => {
 
   return (
     <div className="container">
-      <div className="img-login">
-        <img src={imagem} alt="FundoLogin" />
-        <h2>BEM-VINDO A MW PROJETOS</h2>
-      </div>
       <form onSubmit={handleSubmit}>
         <h1>LOGIN</h1>
         <div className="input-field">
@@ -72,19 +68,8 @@ const Login = () => {
           />
           <FaLock className="icon" />
         </div>
-        <div className="recall-forget">
-          <label>
-            <input type="checkbox" />
-            Lembre de mim
-          </label>
-          <a href="#">Esqueceu a Senha</a>
-        </div>
+
         <button type="submit">Entrar</button>
-        <div className="sign-link">
-          <p>
-            Não tem uma Conta? <a href="#">Registrar-se</a>
-          </p>
-        </div>
       </form>
       <Footer />
     </div>

@@ -46,10 +46,9 @@ const GetAllUsers = () => {
               src="https://www.gravatar.com/avatar/HASH"
               alt="imagem teste"
             />
-            <h2>Nome: {user.fullname || "N/A"}</h2>
+            <h2>{user.fullname || "N/A"}</h2>
             <p>
-              Cargo: {user.cargo || "N/A"} / Credencial:{" "}
-              {user.credencial || "N/A"}
+              {user.cargo || "N/A"} / Credencial: {user.credencial || "N/A"}
             </p>
             <h3>Empresa: {user.empresa_nome || "N/A"}</h3>
           </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
 import logo from "../../assets/logopowertech.png";
 import { FaHome, FaUser, FaUsers } from "react-icons/fa";
@@ -61,34 +61,28 @@ const Navbar = () => {
       <nav>
         <ul className={menuOpen ? "active" : ""}>
           <li>
-            <Link to={"/home"}>
+            <NavLink to={"/home"}>
               <FaHome className="icon" />
               Inicio
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to={"/dashboards"}>
+            <NavLink to={"/dashboards"}>
               <MdDashboard className="icon" />
               Dashboard
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to={"/allusers"}>
+            <NavLink to={"/allusers"}>
               <FaUsers className="icon" />
               All Users
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to={"/isc"}>
+            <NavLink to={"/isc"}>
               <SiSpeedtest className="icon" />
               SESMT
-            </Link>
-          </li>
-          <li>
-            <Link to={"/tbl-descontos"}>
-              <RiUserSearchFill className="icon" />
-              Clientes
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
@@ -106,14 +100,14 @@ const Navbar = () => {
 
         {dropdownOpen && (
           <div className="dropdown-menu">
-            <Link to="/perfil" className="dropdown-item">
+            <NavLink to="/perfil" className="dropdown-item">
               <FaUser className="dropdown-icon" />
               Perfil
-            </Link>
-            <Link to="/" className="dropdown-item">
+            </NavLink>
+            <NavLink to="/" className="dropdown-item">
               <CgLogOff className="dropdown-icon" />
               Logoff
-            </Link>
+            </NavLink>
           </div>
         )}
       </div>

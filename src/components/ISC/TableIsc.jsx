@@ -108,17 +108,21 @@ const TableIsc = () => {
           <div className="insp">
             <div className="card_isc">
               <h2>TOTAL DE INSPEÇÕES</h2>
-              <p>{inspecoes.length}</p>
-              <MdVerifiedUser className="icon-isc-v" />
+              <div className="ico-insp">
+                <p>{inspecoes.length}</p>
+                <MdVerifiedUser className="icon-isc-v" />
+              </div>
             </div>
             <div className="card_isc">
               <h2>TOTAL DE NÃO CONFORMIDADES</h2>
-              <p>
-                {Array.isArray(inspecoes)
-                  ? inspecoes.filter((isc) => isc.n_conforme).length
-                  : 0}
-              </p>
-              <MdSmsFailed className="icon-isc-f" />
+              <div className="ico-insp">
+                <p>
+                  {Array.isArray(inspecoes)
+                    ? inspecoes.filter((isc) => isc.n_conforme).length
+                    : 0}
+                </p>
+                <MdSmsFailed className="icon-isc-f" />
+              </div>
             </div>
           </div>
 
@@ -201,12 +205,6 @@ const TableIsc = () => {
               ))}
             </tbody>
           </table>
-          <button className="link-add">
-            <Link to={"/createisc"}>
-              <IoIosAddCircle className="icon-isc-w" />
-              Adicionar ISC
-            </Link>
-          </button>
         </div>
       )}
       <Footer />

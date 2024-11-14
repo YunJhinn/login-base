@@ -3,7 +3,7 @@ body {
 }
 
 .containerHome {
-  background-color: white;
+  background-color: rgb(223, 221, 221);
   min-height: 100vh;
   min-width: 100%;
   padding: 20px;

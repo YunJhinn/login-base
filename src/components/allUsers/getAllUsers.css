@@ -7,17 +7,23 @@
   width: 100%;
   min-height: 100vh;
   align-items: center;
+  background-color: rgb(235, 230, 230);
 }
 
 .card-usuarios {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
   padding: 15px;
   padding-top: 30px;
+  background-color: WHITE;
   border: 2px solid black;
   border-bottom: 8px solid #00c8ee;
   border-radius: 30px;
-  height: auto;
-  width: 400px;
+  height: 300px;
+  width: 200px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(-10px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -29,22 +35,23 @@
 }
 
 .card-usuarios img {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
 }
 
 .card-usuarios h2 {
-  font-size: 25px;
+  font-size: 17px;
 }
 
 .card-usuarios p {
-  padding: 30px;
-  font-size: 18px;
+  padding: 15px;
+  font-size: 15px;
 }
 
 .card-usuarios h3 {
-  font-size: 20px;
+  font-size: 15px;
+  padding: 3px 10px;
   border: 2px solid #00c8ee;
   border-radius: 15px;
   background-color: white;

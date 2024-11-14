@@ -8,9 +8,7 @@ import { AiOutlineGlobal } from "react-icons/ai";
 import "./Perfil.css";
 
 import Footer from "../footer/footer.jsx";
-import Bar from "../CHARTS/Chart.jsx";
 
-import DonutCharts from "../CHARTS/DonutCharts.jsx";
 import { GiReturnArrow } from "react-icons/gi";
 
 const Perfil = () => {
@@ -68,16 +66,6 @@ const Perfil = () => {
               </p>
 
               <p>
-                <FaPhoneAlt />
-                Telefone:
-                {perfilUser?.telefone || " 62 9 xxxx-xxxx"}
-              </p>
-              <p>
-                <MdEmail />
-                E-mail:
-                {perfilUser?.email || " email@usuário"}
-              </p>
-              <p>
                 <AiOutlineGlobal />
                 Empresa:
                 {localStorage.getItem("empresa") || " empresa-usuário"}
@@ -85,10 +73,6 @@ const Perfil = () => {
             </div>
             <img src={localStorage.getItem("foto-perfil")} alt="foto-usuário" />
           </div>
-        </div>
-        <div className="charts-perfil">
-          <DonutCharts />
-          <Bar />
         </div>
       </div>
 
